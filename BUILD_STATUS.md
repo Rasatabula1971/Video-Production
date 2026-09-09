@@ -29,10 +29,21 @@ Plan: `docs/PLAN_v1.md`. Sequence is that document's §5.
   Remaining 74 are paid providers (FAL/Kling/MiniMax/etc.) and local-GPU tools
   (torch/transformers) — not needed for Series 1.
 
+- [x] **1d. Render smoke test** — `python render_demo.py world-in-numbers`
+  produced a valid MP4: H.264 1920×1080 @ 30fps, AAC, 23s, 4.3 MB, exit 0.
+  Title cards + animated bar charts render clean. This is the same Remotion
+  component stack Series 1 will use for timelines, stat reveals, and comparison
+  charts. **The free render chain is proven end-to-end.**
+  (Remotion's first run pulls a headless Chromium + bundles — ~5 min once;
+  subsequent renders are fast.)
+
 ## Next
 
-- [ ] **1d. First render smoke** — run `framework-smoke`, then a tiny
-  `documentary-montage` render, to confirm the chain end-to-end with the venv active.
+- [ ] **3. First steelpan dry run** — one history topic (candidate: the
+  headline claim, or the note-layout reveal) through `animated-explainer` or
+  `documentary-montage`, free stack only, **no publish**. Gate 1 and Gate 2
+  live. Confirm the format and that the copyright guardrails in
+  `subjects/steelpan/copyright-rules.md` actually hold.
 - [ ] **3. Free end-to-end dry run** — one steelpan-history topic through
   `documentary-montage` or `animated-explainer`, free stack only, no publish.
   Confirm format + copyright guardrails hold.
