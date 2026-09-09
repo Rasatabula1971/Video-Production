@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "text_card",
+      "description": "Hook: 'That spider web isn't decoration. It's a map.'",
+      "start_seconds": 0,
+      "end_seconds": 5.0
+    },
+    {
+      "id": "setup",
+      "type": "text_card",
+      "description": "One sheet of steel; two clashing notes buzz and fight through the metal.",
+      "start_seconds": 5.0,
+      "end_seconds": 13.1
+    },
+    {
+      "id": "build",
+      "type": "diagram",
+      "description": "The map splits them: clashing notes to opposite sides, friendly notes side by side.",
+      "start_seconds": 13.1,
+      "end_seconds": 20.4
+    },
+    {
+      "id": "payoff",
+      "type": "text_card",
+      "description": "Payoff: that's why a steelpan rings clean instead of rattling.",
+      "start_seconds": 20.4,
+      "end_seconds": 26.5
+    },
+    {
+      "id": "landing",
+      "type": "text_card",
+      "description": "Anthony Williams worked it out. Trinidad, 1953.",
+      "start_seconds": 26.5,
+      "end_seconds": 31.0
+    },
+    {
+      "id": "endtag",
+      "type": "text_card",
+      "description": "'Every lead pan still follows his drawing.' + end tag.",
+      "start_seconds": 31.0,
+      "end_seconds": 35.6
+    }
+  ]
+}

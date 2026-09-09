@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "outputs": [
+    {
+      "path": "projects/steelpan-note-layout/renders/note-layout_v2.mp4",
+      "format": "mp4",
+      "codec": "h264",
+      "audio_codec": "aac",
+      "resolution": "1920x1080",
+      "fps": 30,
+      "duration_seconds": 36.65,
+      "file_size_bytes": 7163567,
+      "platform_target": "master"
+    },
+    {
+      "path": "projects/steelpan-note-layout/renders/note-layout_v2_9x16.mp4",
+      "format": "mp4",
+      "codec": "h264",
+      "audio_codec": "aac",
+      "resolution": "1080x1920",
+      "fps": 30,
+      "duration_seconds": 36.65,
+      "file_size_bytes": 6453488,
+      "platform_target": "youtube_shorts"
+    }
+  ],
+  "warnings": [
+    "CAPTIONS: word-level caption spans render concatenated without spaces. Root cause = vendored CaptionOverlay.tsx renders each word in a display:inline-block span with the separator inside it, so the trailing space collapses. Fix belongs in montage_ext (post-process or a patched caption layer), not by editing vendor/.",
+    "VISUAL: no steelpan-diagram component — dry run uses typographic cards, not the spider-web pan animation from the concept.",
+    "ASPECT: rendered 1920x1080 then centre-cropped to 1080x1920; a native portrait composition is a build item.",
+    "THEME: used stock 'flat-motion-graphics'; real episodes bind theme to the brand kit."
+  ],
+  "verification_notes": [
+    "ffprobe: both outputs valid H.264 + AAC, correct resolution, ~36.6s.",
+    "Frame sampling 2/8/15/22/28/33s: dark theme applied, card text legible, comparison and end-tag scenes read well.",
+    "Audio: narration + music present and ducked.",
+    "Guardrails held: no archival imagery, no depiction of Williams, contested oil-drum credit not asserted."
+  ],
+  "metadata": {
+    "cost_usd": 0.0,
+    "stack": "piper + pixabay + faster-whisper + remotion + ffmpeg, all local/free",
+    "published": false
+  }
+}

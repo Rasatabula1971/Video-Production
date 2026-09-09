@@ -1,0 +1,589 @@
+{
+  "theme": "flat-motion-graphics",
+  "cuts": [
+    {
+      "id": "hook",
+      "source": "",
+      "type": "hero_title",
+      "in_seconds": 0,
+      "out_seconds": 5.0,
+      "text": "That spider web isn't decoration.",
+      "heroSubtitle": "It's a map.",
+      "backgroundColor": "#0F172A"
+    },
+    {
+      "id": "setup",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 5.0,
+      "out_seconds": 13.1,
+      "text": "Every note is on the SAME sheet of steel.\nClashing notes side by side would buzz.",
+      "color": "#F8FAFC",
+      "backgroundColor": "#0F172A"
+    },
+    {
+      "id": "build",
+      "source": "",
+      "type": "comparison",
+      "in_seconds": 13.1,
+      "out_seconds": 20.4,
+      "title": "So the layout splits them up",
+      "leftLabel": "Clashing notes",
+      "leftValue": "opposite sides",
+      "rightLabel": "Friendly notes",
+      "rightValue": "side by side",
+      "backgroundColor": "#0F172A"
+    },
+    {
+      "id": "payoff",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 20.4,
+      "out_seconds": 26.5,
+      "text": "That's why a steelpan rings clean instead of rattling.",
+      "color": "#F8FAFC",
+      "backgroundColor": "#0F172A"
+    },
+    {
+      "id": "landing",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 26.5,
+      "out_seconds": 31.0,
+      "text": "Anthony Williams worked it out.\nTrinidad, 1953.",
+      "color": "#F8FAFC",
+      "backgroundColor": "#0F172A"
+    },
+    {
+      "id": "endtag",
+      "source": "",
+      "type": "hero_title",
+      "in_seconds": 31.0,
+      "out_seconds": 35.6,
+      "text": "Every lead pan still follows his drawing.",
+      "heroSubtitle": "Pan. Made in Trinidad.",
+      "backgroundColor": "#0F172A"
+    }
+  ],
+  "overlays": [
+    {
+      "type": "section_title",
+      "in_seconds": 13.3,
+      "out_seconds": 16.5,
+      "text": "The layout",
+      "subtitle": "not random — planned",
+      "accentColor": "#D14A28"
+    }
+  ],
+  "captions": [
+    {
+      "word": "That ",
+      "startMs": 0,
+      "endMs": 180
+    },
+    {
+      "word": "spider ",
+      "startMs": 180,
+      "endMs": 520
+    },
+    {
+      "word": "web ",
+      "startMs": 520,
+      "endMs": 840
+    },
+    {
+      "word": "on ",
+      "startMs": 840,
+      "endMs": 1040
+    },
+    {
+      "word": "a ",
+      "startMs": 1040,
+      "endMs": 1180
+    },
+    {
+      "word": "steelpan. ",
+      "startMs": 1180,
+      "endMs": 1620
+    },
+    {
+      "word": "It's ",
+      "startMs": 2240,
+      "endMs": 2600
+    },
+    {
+      "word": "not ",
+      "startMs": 2600,
+      "endMs": 2760
+    },
+    {
+      "word": "a ",
+      "startMs": 2760,
+      "endMs": 2900
+    },
+    {
+      "word": "decoration. ",
+      "startMs": 2900,
+      "endMs": 3300
+    },
+    {
+      "word": "It's ",
+      "startMs": 4019,
+      "endMs": 4320
+    },
+    {
+      "word": "a ",
+      "startMs": 4320,
+      "endMs": 4380
+    },
+    {
+      "word": "map. ",
+      "startMs": 4380,
+      "endMs": 4640
+    },
+    {
+      "word": "Every ",
+      "startMs": 5280,
+      "endMs": 5560
+    },
+    {
+      "word": "note ",
+      "startMs": 5560,
+      "endMs": 5800
+    },
+    {
+      "word": "sits ",
+      "startMs": 5800,
+      "endMs": 6040
+    },
+    {
+      "word": "on ",
+      "startMs": 6040,
+      "endMs": 6320
+    },
+    {
+      "word": "one ",
+      "startMs": 6320,
+      "endMs": 6560
+    },
+    {
+      "word": "piece ",
+      "startMs": 6560,
+      "endMs": 6800
+    },
+    {
+      "word": "of ",
+      "startMs": 6800,
+      "endMs": 6980
+    },
+    {
+      "word": "steel. ",
+      "startMs": 6980,
+      "endMs": 7280
+    },
+    {
+      "word": "Put ",
+      "startMs": 7960,
+      "endMs": 8240
+    },
+    {
+      "word": "two ",
+      "startMs": 8240,
+      "endMs": 8500
+    },
+    {
+      "word": "clashing ",
+      "startMs": 8500,
+      "endMs": 8900
+    },
+    {
+      "word": "notes ",
+      "startMs": 8900,
+      "endMs": 9260
+    },
+    {
+      "word": "next ",
+      "startMs": 9260,
+      "endMs": 9560
+    },
+    {
+      "word": "to ",
+      "startMs": 9560,
+      "endMs": 9780
+    },
+    {
+      "word": "each ",
+      "startMs": 9780,
+      "endMs": 9920
+    },
+    {
+      "word": "other, ",
+      "startMs": 9920,
+      "endMs": 10180
+    },
+    {
+      "word": "and ",
+      "startMs": 10520,
+      "endMs": 10680
+    },
+    {
+      "word": "they ",
+      "startMs": 10680,
+      "endMs": 10780
+    },
+    {
+      "word": "buzz. ",
+      "startMs": 10780,
+      "endMs": 11000
+    },
+    {
+      "word": "They ",
+      "startMs": 11720,
+      "endMs": 11860
+    },
+    {
+      "word": "fight ",
+      "startMs": 11860,
+      "endMs": 12100
+    },
+    {
+      "word": "through ",
+      "startMs": 12100,
+      "endMs": 12280
+    },
+    {
+      "word": "the ",
+      "startMs": 12280,
+      "endMs": 12380
+    },
+    {
+      "word": "metal. ",
+      "startMs": 12380,
+      "endMs": 12640
+    },
+    {
+      "word": "So ",
+      "startMs": 13200,
+      "endMs": 13360
+    },
+    {
+      "word": "the ",
+      "startMs": 13360,
+      "endMs": 13480
+    },
+    {
+      "word": "map ",
+      "startMs": 13480,
+      "endMs": 13680
+    },
+    {
+      "word": "splits ",
+      "startMs": 13680,
+      "endMs": 13980
+    },
+    {
+      "word": "them ",
+      "startMs": 13980,
+      "endMs": 14240
+    },
+    {
+      "word": "up. ",
+      "startMs": 14240,
+      "endMs": 14440
+    },
+    {
+      "word": "Clashing ",
+      "startMs": 14940,
+      "endMs": 15260
+    },
+    {
+      "word": "notes ",
+      "startMs": 15260,
+      "endMs": 15640
+    },
+    {
+      "word": "go ",
+      "startMs": 15640,
+      "endMs": 15860
+    },
+    {
+      "word": "to ",
+      "startMs": 15860,
+      "endMs": 16000
+    },
+    {
+      "word": "opposite ",
+      "startMs": 16000,
+      "endMs": 16320
+    },
+    {
+      "word": "sides ",
+      "startMs": 16320,
+      "endMs": 16780
+    },
+    {
+      "word": "of ",
+      "startMs": 16780,
+      "endMs": 17000
+    },
+    {
+      "word": "the ",
+      "startMs": 17000,
+      "endMs": 17120
+    },
+    {
+      "word": "drum. ",
+      "startMs": 17120,
+      "endMs": 17340
+    },
+    {
+      "word": "Notes ",
+      "startMs": 17960,
+      "endMs": 18200
+    },
+    {
+      "word": "that ",
+      "startMs": 18200,
+      "endMs": 18440
+    },
+    {
+      "word": "sound ",
+      "startMs": 18440,
+      "endMs": 18700
+    },
+    {
+      "word": "good ",
+      "startMs": 18700,
+      "endMs": 18940
+    },
+    {
+      "word": "together ",
+      "startMs": 18940,
+      "endMs": 19260
+    },
+    {
+      "word": "sit ",
+      "startMs": 19260,
+      "endMs": 19560
+    },
+    {
+      "word": "close. ",
+      "startMs": 19560,
+      "endMs": 19840
+    },
+    {
+      "word": "That's ",
+      "startMs": 20660,
+      "endMs": 20980
+    },
+    {
+      "word": "why ",
+      "startMs": 20980,
+      "endMs": 21180
+    },
+    {
+      "word": "a ",
+      "startMs": 21180,
+      "endMs": 21360
+    },
+    {
+      "word": "steelpan ",
+      "startMs": 21360,
+      "endMs": 21820
+    },
+    {
+      "word": "rings ",
+      "startMs": 21820,
+      "endMs": 22080
+    },
+    {
+      "word": "clean ",
+      "startMs": 22080,
+      "endMs": 22480
+    },
+    {
+      "word": "instead ",
+      "startMs": 22480,
+      "endMs": 22800
+    },
+    {
+      "word": "of ",
+      "startMs": 22800,
+      "endMs": 23020
+    },
+    {
+      "word": "rattling. ",
+      "startMs": 23020,
+      "endMs": 23380
+    },
+    {
+      "word": "The ",
+      "startMs": 24060,
+      "endMs": 24220
+    },
+    {
+      "word": "pattern ",
+      "startMs": 24220,
+      "endMs": 24560
+    },
+    {
+      "word": "is ",
+      "startMs": 24560,
+      "endMs": 24720
+    },
+    {
+      "word": "the ",
+      "startMs": 24720,
+      "endMs": 24840
+    },
+    {
+      "word": "reason ",
+      "startMs": 24840,
+      "endMs": 25040
+    },
+    {
+      "word": "it ",
+      "startMs": 25040,
+      "endMs": 25220
+    },
+    {
+      "word": "sounds ",
+      "startMs": 25220,
+      "endMs": 25540
+    },
+    {
+      "word": "like ",
+      "startMs": 25540,
+      "endMs": 25880
+    },
+    {
+      "word": "that. ",
+      "startMs": 25880,
+      "endMs": 26160
+    },
+    {
+      "word": "A ",
+      "startMs": 26640,
+      "endMs": 26880
+    },
+    {
+      "word": "tuner ",
+      "startMs": 26880,
+      "endMs": 27140
+    },
+    {
+      "word": "named ",
+      "startMs": 27140,
+      "endMs": 27420
+    },
+    {
+      "word": "Anthony ",
+      "startMs": 27420,
+      "endMs": 27780
+    },
+    {
+      "word": "Williams ",
+      "startMs": 27780,
+      "endMs": 28180
+    },
+    {
+      "word": "worked ",
+      "startMs": 28180,
+      "endMs": 28520
+    },
+    {
+      "word": "this ",
+      "startMs": 28520,
+      "endMs": 28760
+    },
+    {
+      "word": "out ",
+      "startMs": 28760,
+      "endMs": 28960
+    },
+    {
+      "word": "in ",
+      "startMs": 28960,
+      "endMs": 29080
+    },
+    {
+      "word": "Trinidad ",
+      "startMs": 29080,
+      "endMs": 29520
+    },
+    {
+      "word": "in ",
+      "startMs": 29520,
+      "endMs": 30080
+    },
+    {
+      "word": "1953. ",
+      "startMs": 30080,
+      "endMs": 31240
+    },
+    {
+      "word": "Every ",
+      "startMs": 32020,
+      "endMs": 32299
+    },
+    {
+      "word": "lead ",
+      "startMs": 32299,
+      "endMs": 32560
+    },
+    {
+      "word": "pan ",
+      "startMs": 32560,
+      "endMs": 32920
+    },
+    {
+      "word": "in ",
+      "startMs": 32920,
+      "endMs": 33080
+    },
+    {
+      "word": "the ",
+      "startMs": 33080,
+      "endMs": 33160
+    },
+    {
+      "word": "world ",
+      "startMs": 33160,
+      "endMs": 33380
+    },
+    {
+      "word": "still ",
+      "startMs": 33380,
+      "endMs": 33620
+    },
+    {
+      "word": "follows ",
+      "startMs": 33620,
+      "endMs": 34060
+    },
+    {
+      "word": "his ",
+      "startMs": 34060,
+      "endMs": 34280
+    },
+    {
+      "word": "drawing. ",
+      "startMs": 34280,
+      "endMs": 34560
+    }
+  ],
+  "audio": {
+    "narration": {
+      "src": "steelpan-note-layout/narration_full.wav",
+      "volume": 1.0
+    },
+    "music": {
+      "src": "steelpan-note-layout/music_bed.mp3",
+      "volume": 0.12,
+      "offsetSeconds": 8,
+      "fadeInSeconds": 1.5,
+      "fadeOutSeconds": 3,
+      "loop": true
+    }
+  }
+}

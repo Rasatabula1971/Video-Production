@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "render_runtime": "remotion",
+  "renderer_family": "explainer-teacher",
+  "composition_mode": "templated",
+  "cuts": [
+    {
+      "id": "hook",
+      "source": "",
+      "in_seconds": 0,
+      "out_seconds": 5.0,
+      "backgroundColor": "#0B1F2A",
+      "reason": "hook scene (hero_title)"
+    },
+    {
+      "id": "setup",
+      "source": "",
+      "in_seconds": 5.0,
+      "out_seconds": 13.1,
+      "backgroundColor": "#0B1F2A",
+      "reason": "setup scene (callout)"
+    },
+    {
+      "id": "build",
+      "source": "",
+      "in_seconds": 13.1,
+      "out_seconds": 20.4,
+      "backgroundColor": "#0B1F2A",
+      "reason": "build scene (comparison)"
+    },
+    {
+      "id": "payoff",
+      "source": "",
+      "in_seconds": 20.4,
+      "out_seconds": 26.5,
+      "backgroundColor": "#0B1F2A",
+      "reason": "payoff scene (text_card)"
+    },
+    {
+      "id": "landing",
+      "source": "",
+      "in_seconds": 26.5,
+      "out_seconds": 31.0,
+      "backgroundColor": "#0B1F2A",
+      "reason": "landing scene (text_card)"
+    },
+    {
+      "id": "endtag",
+      "source": "",
+      "in_seconds": 31.0,
+      "out_seconds": 35.6,
+      "backgroundColor": "#0B1F2A",
+      "reason": "endtag scene (hero_title)"
+    }
+  ],
+  "audio": {
+    "narration": {
+      "segments": [
+        {
+          "asset_id": "narration_full",
+          "start_seconds": 0
+        }
+      ]
+    },
+    "music": {
+      "asset_id": "music_bed",
+      "volume": 0.12,
+      "offset_seconds": 8,
+      "duck": true
+    }
+  },
+  "subtitles": {
+    "enabled": true,
+    "style": "word_level_burn_in",
+    "source": "faster_whisper word timestamps"
+  },
+  "metadata": {
+    "target_profile": "youtube_shorts (via reframe from 1920x1080)",
+    "total_duration_seconds": 35.6
+  }
+}

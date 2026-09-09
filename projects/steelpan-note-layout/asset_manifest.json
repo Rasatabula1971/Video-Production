@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "total_cost_usd": 0.0,
+  "assets": [
+    {
+      "id": "narration_full",
+      "type": "audio",
+      "path": "projects/steelpan-note-layout/assets/audio/narration_full.wav",
+      "source_tool": "piper_tts",
+      "scene_id": "all",
+      "model": "en_US-lessac-medium",
+      "duration_seconds": 34.9,
+      "format": "wav",
+      "cost_usd": 0.0
+    },
+    {
+      "id": "music_bed",
+      "type": "audio",
+      "path": "projects/steelpan-note-layout/assets/audio/music_bed.mp3",
+      "source_tool": "pixabay_music",
+      "scene_id": "all",
+      "provider": "pixabay",
+      "license": "Pixabay Content License (free, no attribution required)",
+      "format": "mp3",
+      "cost_usd": 0.0
+    },
+    {
+      "id": "captions",
+      "type": "subtitle",
+      "path": "projects/steelpan-note-layout/assets/captions_words.json",
+      "source_tool": "faster_whisper",
+      "scene_id": "all",
+      "model": "small",
+      "cost_usd": 0.0
+    }
+  ]
+}
