@@ -1,0 +1,247 @@
+{
+  "version": "1.0",
+  "concept_options": [
+    {
+      "id": "C1",
+      "title": "This Isn't a Piano",
+      "hook": "You think a steelpan goes low to high. Watch where the notes actually are.",
+      "narrative_structure": "comparison",
+      "visual_approach": "Top-down animated tenor-pan diagram. Start with a piano keyboard the viewer expects, morph/overlay it onto the pan face, then reveal the real cycle-of-fourths-and-fifths ring. Kinetic labels. One slow push-in. End tag composited on the final frame.",
+      "suggested_playbook": "minimalist-diagram",
+      "target_audience": "General audience + Caribbean diaspora + musicians from keyboard instruments",
+      "target_platform": "youtube",
+      "target_duration_seconds": 42,
+      "key_points": [
+        "A piano runs in pitch order; a tenor pan does not.",
+        "Adjacent notes on the pan are a fourth or a fifth apart, not a semitone.",
+        "The reason is physical: every note shares one sheet of steel, so dissonant neighbours would fight through the metal.",
+        "Harmonically related notes (4th, 5th, octave) sit together and reinforce the tone.",
+        "This layout - Anthony Williams's 1953 'spider web' - is now the world standard."
+      ],
+      "core_message": "The 'weird' steelpan layout is acoustic engineering, not decoration.",
+      "cta": "Follow for how the pan got invented.",
+      "tone": "confident, warm, a little bit show-off",
+      "grounded_in": [
+        "angles_discovered[0]",
+        "angles_discovered[1]",
+        "data_points[2]",
+        "data_points[0]"
+      ],
+      "why_this_works": "Opens on a near-universal wrong assumption and disproves it visually in the first 2 seconds - the strongest possible stop. The payoff ('one sheet of steel') converts surprise into respect, which drives completion and shares. No archive material, no permissions, no footage."
+    },
+    {
+      "id": "C2",
+      "title": "The Spider Web Is Engineering",
+      "hook": "This pattern on a steelpan isn't decoration. It's a physics problem being solved.",
+      "narrative_structure": "myth_busting",
+      "visual_approach": "Lead on the etched 'spider web' groove pattern (diagram, not photo). Animate two dissonant notes placed side by side 'buzzing', then slide them to opposite sides of the drum and let them ring clean. Diagram-first, high-contrast typography.",
+      "suggested_playbook": "minimalist-diagram",
+      "target_audience": "Music-curious, engineering-curious, steelband players",
+      "target_platform": "youtube",
+      "target_duration_seconds": 40,
+      "key_points": [
+        "The 'spider web' name comes from the groove pattern, but the pattern is a consequence, not the goal.",
+        "Semitone neighbours interfere through the shared steel, so they are pushed to opposite sides.",
+        "Fourths, fifths and octaves reinforce a struck note, so they are kept close.",
+        "A consistent interval formula also makes the pan far easier to tune accurately."
+      ],
+      "core_message": "Every note position on a steelpan is an acoustic decision.",
+      "cta": "Follow for more on how the pan works.",
+      "tone": "precise, quietly impressed",
+      "grounded_in": [
+        "angles_discovered[1]",
+        "data_points[2]",
+        "data_points[3]"
+      ],
+      "why_this_works": "Targets the 'that's just how it looks' assumption and replaces it with a mechanism. Slightly more technical than C1 - stronger with the music/engineering audience, a little less universal."
+    },
+    {
+      "id": "C3",
+      "title": "One Man's Drawing",
+      "hook": "In 1953, one man in Trinidad sketched where every note on a steelpan should go. The whole world still uses his drawing.",
+      "narrative_structure": "story",
+      "visual_approach": "Timeline motion-graphics: 1953, a hand-drawn-style sketch animating into the finished cycle-of-fourths-and-fifths ring, then the ring multiplying across a world map. No depiction of Williams's face (copyright + authenticity rule) - his name as type, his idea as the visual.",
+      "suggested_playbook": "minimalist-diagram",
+      "target_audience": "Caribbean diaspora, Trinidadian pride, instrument-history audience",
+      "target_platform": "youtube",
+      "target_duration_seconds": 45,
+      "key_points": [
+        "Anthony 'Muffman' Williams, captain and tuner of Pan Am North Stars.",
+        "He believed note placement was why some notes sounded worse, and studied it with sketches and calculations.",
+        "Result: the fourths-and-fifths 'spider web' tenor pan, dated to 1953.",
+        "It is the only standardised note layout in the entire steelband - used on lead pans everywhere."
+      ],
+      "core_message": "The standard steelpan layout has an author, and he was Trinidadian.",
+      "cta": "Follow - this is episode one of the story of pan.",
+      "tone": "warm, proud, story-first",
+      "grounded_in": [
+        "angles_discovered[2]",
+        "data_points[1]",
+        "data_points[0]"
+      ],
+      "why_this_works": "Strongest identity pull for the core diaspora audience and the cleanest bridge into the rest of Series 1. Slightly slower hook than C1 - trades some cold-scroll stopping power for narrative and shareability within the target community."
+    }
+  ],
+  "selected_concept": {
+    "concept_id": "C1",
+    "rationale": "Recommended. C1 has the hardest cold-open (disproves a near-universal assumption visually in ~2s), the best surprise-to-respect payoff for completion and shares, and it still name-drops Williams at the end as a bridge to C3 later. C2 is the same idea aimed at a narrower audience; C3 is a strong episode but works better once the account has a following. For a dry run C1 also exercises the most pipeline surface (comparison structure, morph animation, diagram tool, kinetic type).",
+    "modifications": []
+  },
+  "production_plan": {
+    "pipeline": "animated-explainer",
+    "playbook": "minimalist-diagram",
+    "render_runtime": "remotion",
+    "renderer_family": "explainer-data",
+    "composition_mode": "templated",
+    "art_direction": "Dark ground, one accent (chrome-fire orange), high-contrast grotesque display type. One slow push-in per scene, no frantic motion. Diagram is the hero; text supports it.",
+    "stages": [
+      {
+        "stage": "script",
+        "tools": [],
+        "approach": "hook -> setup -> build -> payoff -> landing, ~100-110 words for ~42s at 150 wpm. Piper speaker directions. Passes through montage_ext/hook_scorer hard-fail checks (subject-driven)."
+      },
+      {
+        "stage": "scene_plan",
+        "tools": [],
+        "approach": "5-6 scenes: piano expectation / overlay onto pan / the real ring reveal / one-sheet-of-steel payoff / Williams bridge + end tag."
+      },
+      {
+        "stage": "assets",
+        "tools": [
+          {
+            "tool_name": "tts_selector",
+            "role": "route narration to Piper (local, free)",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          },
+          {
+            "tool_name": "diagram_gen",
+            "role": "cycle-of-fourths-and-fifths pan diagram",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          },
+          {
+            "tool_name": "pixabay_music",
+            "role": "licensed music bed",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          },
+          {
+            "tool_name": "subtitle_gen",
+            "role": "word-level captions",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          }
+        ],
+        "approach": "Piper narration (local, free). Cycle-of-fourths-and-fifths diagram via diagram_gen or Manim. Pixabay music bed (licensed). Word-level captions."
+      },
+      {
+        "stage": "edit",
+        "tools": [],
+        "approach": "9:16 timeline, audio ducking under narration, captions burned in, music bed low."
+      },
+      {
+        "stage": "compose",
+        "tools": [
+          {
+            "tool_name": "video_compose",
+            "role": "Remotion render at 1080x1920",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          },
+          {
+            "tool_name": "remotion_caption_burn",
+            "role": "burn word-level captions",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          },
+          {
+            "tool_name": "audio_mixer",
+            "role": "duck music under narration",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          }
+        ],
+        "approach": "Remotion render at 1080x1920, ffprobe validation, frame-sample QA. Gate 2."
+      }
+    ],
+    "quality_tradeoffs": [
+      {
+        "tradeoff": "diagram_gen (fast, schematic) vs Manim (slower, precise geometry for the note ring)",
+        "recommendation": "Try diagram_gen first; fall back to Manim if the ring needs true interval geometry."
+      },
+      {
+        "tradeoff": "Piper local TTS vs a paid premium voice",
+        "recommendation": "Piper for the dry run and for Series 1 until a real Trinidadian VO is recorded. Do not fake a Trini accent with TTS."
+      }
+    ],
+    "alternative_paths": [
+      {
+        "description": "All-free stack: Piper + Remotion + diagram_gen + Pixabay music",
+        "total_cost_usd": 0.0,
+        "quality_level": "free"
+      },
+      {
+        "description": "Add a paid premium English VO (e.g. ElevenLabs) for a warmer read",
+        "total_cost_usd": 0.3,
+        "quality_level": "standard"
+      }
+    ],
+    "delivery_promise": {
+      "promise_type": "motion_led",
+      "motion_required": true,
+      "source_required": false,
+      "tone_mode": "confident-warm",
+      "quality_floor": "presentable",
+      "approved_fallback": null
+    },
+    "music_source": {
+      "source_type": "ai_generated",
+      "provider": "pixabay_music",
+      "mood_direction": "warm, sparse, subtle steel-adjacent bed - no melodic pan performance (rights)",
+      "estimated_cost_usd": 0.0
+    },
+    "voice_selection": {
+      "provider": "piper",
+      "voice_id": "en_US-*-medium",
+      "rationale": "Free, offline, neutral-clear. Placeholder for a real Trinidadian VO later.",
+      "estimated_cost_usd": 0.0,
+      "delivery_style": "measured, lands the reveal",
+      "pacing_policy": "≈150 wpm, pause before the payoff",
+      "sample_approval_required": false
+    }
+  },
+  "cost_estimate": {
+    "total_estimated_usd": 0.0,
+    "line_items": [
+      {
+        "tool": "tts_selector/piper",
+        "operation": "narration (~110 words)",
+        "estimated_usd": 0.0
+      },
+      {
+        "tool": "diagram_gen",
+        "operation": "cycle-of-fourths-and-fifths pan diagram",
+        "estimated_usd": 0.0
+      },
+      {
+        "tool": "pixabay_music",
+        "operation": "licensed music bed",
+        "estimated_usd": 0.0
+      },
+      {
+        "tool": "video_compose (Remotion)",
+        "operation": "1080x1920 render ~42s",
+        "estimated_usd": 0.0
+      }
+    ],
+    "budget_cap_usd": 2.0,
+    "budget_verdict": "within_budget",
+    "savings_options": [
+      "Already $0 - no paid providers in this plan."
+    ]
+  },
+  "approval": {
+    "status": "pending"
+  }
+}

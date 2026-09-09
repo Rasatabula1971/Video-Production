@@ -18,9 +18,10 @@ venv/
 service_account*.json
 gcp-*.json
 
-# Pipeline outputs (regenerable — never commit large media)
+# Pipeline outputs — ignore generated media/corpus, but KEEP the decision-trail
+# artifacts (schema-valid JSON + notes). Those are the record, per the ledger
+# philosophy in docs/PLAN_v1.md.
 output/
-projects/
 corpus/
 **/corpus/
 music_library/
@@ -28,7 +29,17 @@ runs/
 *.mp4
 *.mov
 *.wav
+*.mp3
+*.png
+*.jpg
+*.onnx
+projects/**/renders/
+projects/**/assets/
+projects/**/audio/
 !vendor/openmontage/**/demo-props/**
+!projects/**/*.json
+!projects/**/*.md
+!projects/**/*.yaml
 
 # Local model downloads (Piper voices etc., fetched at runtime)
 *.onnx

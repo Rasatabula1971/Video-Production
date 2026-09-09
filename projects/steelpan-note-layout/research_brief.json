@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "topic": "A steelpan is not laid out like a piano - the cycle-of-fourths-and-fifths note layout",
+  "research_date": "2026-09-09",
+  "landscape": {
+    "existing_content": [
+      {
+        "title": "Understanding Steelpan Note Arrangement",
+        "url": "https://www.tiktok.com/@cotepercussion/video/7493927549060402474",
+        "source": "tiktok",
+        "angle": "player/educator explains the layout to musicians",
+        "what_it_covers": "That the tenor pan uses fourths and fifths, not pitch order",
+        "what_it_misses": "The physical reason (shared sheet of steel) and the human story (Anthony Williams)",
+        "engagement_signal": "niche music-educator audience"
+      },
+      {
+        "title": "Circle of Fifths for Tenor Steelpan",
+        "url": "https://www.youtube.com/watch?v=Y4QhL04xkd8",
+        "source": "youtube",
+        "angle": "music-theory tutorial for pan students",
+        "what_it_covers": "Mapping the circle of fifths onto the tenor pan face",
+        "what_it_misses": "Short-form framing; the surprise; the invention date and inventor",
+        "engagement_signal": "tutorial-length, low view count (2022)"
+      },
+      {
+        "title": "Steel Pan Tuning - Layout (tuner reference)",
+        "url": "https://stockholmsteelband.se/pan/tuning/theory25_layout.php",
+        "source": "blog",
+        "angle": "tuner's reference - deep and technical",
+        "what_it_covers": "Harmonic-relationship rationale, interference avoidance, tuning benefit",
+        "what_it_misses": "Any narrative or visual treatment; not made for a general audience",
+        "engagement_signal": "reference traffic only"
+      }
+    ],
+    "saturated_angles": [
+      "generic circle-of-fifths music-theory explainers that are not pan-specific",
+      "\"how to play the steelpan\" beginner tutorials"
+    ],
+    "underserved_gaps": [
+      "The layout as a 20-30s surprise for a general audience: it's not in order, and here is why",
+      "The physical payoff: the notes share one sheet of steel, so dissonant neighbours would fight through the metal",
+      "The human story: Anthony Williams, sketches and calculations, 1953, now the world standard",
+      "A clean top-down animated diagram rather than a photo or a lecture"
+    ]
+  },
+  "trending": {
+    "timeliness_window": "evergreen"
+  },
+  "data_points": [
+    {
+      "claim": "The 4ths-and-5ths layout is the only standardised note layout in the entire steelband family.",
+      "source_url": "https://www.definitepitchsteelpans.com/tenor",
+      "source_name": "DefinitePitchSteel / Triangle Steelbands",
+      "credibility": "secondary_source",
+      "surprise_factor": "surprising",
+      "usable_as": "closing_punch"
+    },
+    {
+      "claim": "Anthony 'Muffman' Williams laid out the 'spider web' tenor pan in a cycle of fourths and fifths; sources date it to 1953, after an extended study using sketches and calculations because he believed note placement was why some notes had inferior tone.",
+      "source_url": "https://en.wikipedia.org/wiki/Anthony_Williams_(musician)",
+      "source_name": "Wikipedia; Trinidad Express; NIU Today",
+      "credibility": "secondary_source",
+      "surprise_factor": "notable",
+      "usable_as": "script_anchor"
+    },
+    {
+      "claim": "On a piano each note has its own string and hammer and sounds independently; on a steelpan every note lives on the same sheet of steel, so notes that are dissonant are placed physically far apart to stop them interfering.",
+      "source_url": "https://jaced.com/2005/06/27/steel-drum-tuning-and-layout/",
+      "source_name": "Jace Daniel - Steel Drum Tuning & Layout",
+      "credibility": "secondary_source",
+      "surprise_factor": "counterintuitive",
+      "usable_as": "hook"
+    },
+    {
+      "claim": "Notes a fourth, fifth, or octave apart reinforce a struck note's harmonic spectrum, so the layout puts those neighbours under the hand; semitone neighbours are pushed to opposite sides of the drum.",
+      "source_url": "https://stockholmsteelband.se/pan/tuning/theory25_layout.php",
+      "source_name": "Stockholm Steel Band - tuning theory",
+      "credibility": "secondary_source",
+      "surprise_factor": "notable",
+      "usable_as": "stat_card"
+    }
+  ],
+  "audience_insights": {
+    "common_questions": [
+      "Why aren't the notes in order?",
+      "How does anyone learn to play that?",
+      "Who decided where the notes go?"
+    ],
+    "misconceptions": [
+      {
+        "myth": "A steelpan is laid out low-to-high like a piano keyboard.",
+        "reality": "The tenor pan is arranged in a cycle of fourths and fifths; adjacent notes are a fourth or a fifth apart, not a semitone.",
+        "source": "https://pantuner.com/glossary/4ths-5ths/"
+      },
+      {
+        "myth": "The 'spider web' pattern is just decorative.",
+        "reality": "It is acoustic engineering: harmonically related notes sit together to reinforce tone; dissonant notes are exiled to opposite sides so they don't interfere through the shared steel.",
+        "source": "https://jaced.com/2005/06/27/steel-drum-tuning-and-layout/"
+      }
+    ],
+    "knowledge_level": "General audience knows a steelpan by sound, not by construction. Assumes pitch-order layout. No music-theory needed for the payoff; the reveal is visual.",
+    "pain_points": [
+      "Keyboard players find the pan disorienting because none of their spatial intuition transfers."
+    ]
+  },
+  "angles_discovered": [
+    {
+      "name": "This isn't a piano",
+      "hook": "You think you know how a steelpan works. Look where the notes actually are.",
+      "type": "contrarian",
+      "why_now": "Evergreen; the assumption it breaks is near-universal and the reveal is purely visual.",
+      "grounded_in": [
+        "landscape.underserved_gaps[0]",
+        "data_points[0]"
+      ]
+    },
+    {
+      "name": "One sheet of steel",
+      "hook": "Every note on a steelpan is stuck to every other note. That's why the layout looks insane.",
+      "type": "narrative",
+      "why_now": "The physical payoff turns 'weird' into 'genius' - strongest completion driver.",
+      "grounded_in": [
+        "data_points[2]",
+        "data_points[3]"
+      ]
+    },
+    {
+      "name": "The man who drew the map",
+      "hook": "In 1953 one man sketched where every note should go. The whole world still uses his drawing.",
+      "type": "narrative",
+      "why_now": "Human story plus a scale payoff; ties the layout to a named Trinidadian pioneer.",
+      "grounded_in": [
+        "data_points[1]"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Anthony_Williams_(musician)",
+      "title": "Anthony Williams (musician) - Wikipedia",
+      "used_for": "1953 spider-web pan; world standard; study with sketches and calculations",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://jaced.com/2005/06/27/steel-drum-tuning-and-layout/",
+      "title": "Steel Drum Tuning & Layout - Jace Daniel",
+      "used_for": "piano vs pan: independent strings vs one shared sheet of steel",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://stockholmsteelband.se/pan/tuning/theory25_layout.php",
+      "title": "Steel Pan Tuning - Layout",
+      "used_for": "harmonic-relationship rationale; interference avoidance; tuning benefit",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://pantuner.com/glossary/4ths-5ths/",
+      "title": "4ths & 5ths - Pantuner, Inc.",
+      "used_for": "definition of the 4ths & 5ths layout",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://www.definitepitchsteelpans.com/tenor",
+      "title": "Tenor - DefinitePitchSteel",
+      "used_for": "4ths & 5ths is the only standardised steelband layout",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://niutoday.info/2021/06/07/niu-awards-steelpan-innovator-anthony-williams-an-honorary-doctorate-in-human-letters/",
+      "title": "NIU awards steelpan innovator Anthony Williams an honorary doctorate",
+      "used_for": "corroborates Williams's study and 'spider web' pan",
+      "reliability": "secondary"
+    }
+  ]
+}
