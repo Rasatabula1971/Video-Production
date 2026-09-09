@@ -8,6 +8,10 @@ manual work in between.
 **First subject:** the history of the Trinidad steelpan — its pioneers and how
 the instrument evolved. Culture-first launch for YouTube Shorts.
 
+The subject varies. Steelpan is subject #1, not the only one. Everything
+subject-specific lives in `subjects/<id>/`; the engine and `montage_ext/` stay
+generic. Adding a subject is a new folder, nothing else.
+
 ## How this repo is put together
 
 | Path | What it is |
