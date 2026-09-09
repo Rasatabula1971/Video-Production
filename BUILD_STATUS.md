@@ -37,13 +37,23 @@ Plan: `docs/PLAN_v1.md`. Sequence is that document's §5.
   (Remotion's first run pulls a headless Chromium + bundles — ~5 min once;
   subsequent renders are fast.)
 
+- [x] **3. First steelpan dry run** — `projects/steelpan-note-layout/`.
+  Topic "Why is there a spider web on a steelpan?" through `animated-explainer`,
+  free stack, no publish. All artifacts schema-valid (research_brief → proposal
+  → script → scene_plan → asset_manifest → edit_decisions → render_report).
+  Gate 1 was a real decision point (user picked C2, redirected it). Guardrails
+  held. Rendered end to end: Remotion → H.264 1080p + AAC, ~36.6s, $0.
+  See `projects/steelpan-note-layout/DRY_RUN_NOTES.md` for the 6 build items
+  it surfaced (biggest: a bespoke steelpan-diagram component; native 9:16
+  composition; the `hook_scorer` module; a vendored caption bug to work around).
+
 ## Next
 
-- [ ] **3. First steelpan dry run** — one history topic (candidate: the
-  headline claim, or the note-layout reveal) through `animated-explainer` or
-  `documentary-montage`, free stack only, **no publish**. Gate 1 and Gate 2
-  live. Confirm the format and that the copyright guardrails in
-  `subjects/steelpan/copyright-rules.md` actually hold.
+- [ ] **Brand module** — `brands/` sibling to `subjects/`, multi-brand,
+  conversational brand-intake skill. Author `brands/the-chrome-factory/`.
+- [ ] **4. `montage_ext/hook_scorer/`** — automate the guardrail + scoring loop.
+- [ ] A `SpiderWebPan` (or general subject-diagram) Remotion/Manim component.
+- [ ] Native 9:16 Explainer composition (stop centre-cropping).
 - [ ] **3. Free end-to-end dry run** — one steelpan-history topic through
   `documentary-montage` or `animated-explainer`, free stack only, no publish.
   Confirm format + copyright guardrails hold.
