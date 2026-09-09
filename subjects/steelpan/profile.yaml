@@ -1,5 +1,10 @@
 # Steelpan Subject Package — profile
 # Read by montage_ext/ before every run. Plain values, no code.
+#
+# BRAND: this subject runs under brands/the-chrome-factory/. Brand-level fields
+# below (brand:, content_pillars:, cadence:, parts of audience:) are being
+# migrated to brand.yaml — the brand kit wins on any conflict once its status
+# is `approved`. Keep here only what is specific to the steelpan-history topic.
 
 subject:
   id: steelpan

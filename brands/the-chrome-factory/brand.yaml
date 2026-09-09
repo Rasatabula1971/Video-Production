@@ -1,0 +1,98 @@
+# The Chrome Factory — brand kit
+# STATUS: pending_intake. This is a stub. Run montage_ext/brand_intake to author it.
+# Placeholder values are marked TODO and must not be used for a published video.
+
+version: "1.0"
+id: the-chrome-factory
+status: pending_intake
+
+foundation:
+  what_we_do: "TODO — one sentence. (Draft: The Chrome Factory restores and re-chromes steelpans in Trinidad.)"
+  target_customer: ["TODO"]
+  customer_problem: "TODO"
+  positioning: "TODO"
+  brand_promise: "TODO"
+  core_values: ["TODO", "TODO", "TODO"]
+  personality: ["TODO — e.g. proud, precise, warm, hands-on"]
+  desired_perception: "TODO"
+  tagline: "TODO"
+
+messaging:
+  one_line: "TODO"
+  thirty_second: "TODO"
+  value_proposition: "TODO"
+  key_messages: ["TODO", "TODO", "TODO"]
+
+voice:
+  tone: "TODO — draft: confident, warm, Trinidadian pride without nostalgia-mush"
+  words_to_use: []
+  words_to_avoid: []
+  hard_fail_rules:
+    - rule: "Never fake a Trinidadian accent with a synthetic voice."
+      why: "Reads as mockery. Use a neutral-clear TTS or a real Trini voice."
+
+visual:
+  palette:
+    ink: "#0B1F2A"      # TODO confirm
+    paper: "#F4EFE6"    # TODO confirm
+    accent: "#D14A28"   # TODO confirm — chrome-fire orange
+  typography:
+    display: "TODO — strong grotesque"
+    body: "TODO — humanist sans"
+  motion:
+    vocabulary: ["one slow push/pull per scene", "kinetic type for quotes and dates", "animated diagrams for note layout / timelines / maps"]
+    pacing_rules:
+      - "Max 3s hold on any static element."
+      - "A visible change every 1-2 seconds."
+      - "Text animates in word-by-word, synced to the voice."
+    render_runtime_preference: hyperframes
+  must_never_appear:
+    - "Archival photographs of named steelpan pioneers"
+    - "AI-generated depictions of real historical figures or specific historical pans"
+    - "Panorama / steelband / Carnival performance footage or photos"
+    - "Any asset without recorded provenance (source + URL + licence)"
+  end_tag:
+    line: "TODO — draft: Pan. Made in Trinidad."
+    mode: overlay
+
+content_strategy:
+  pillars: ["culture_history", "education", "craftsmanship", "surprising_fact"]
+  pillar_mix_notes: "Hold ~1 in 5 posts as craftsmanship so a later product pivot is a shift in emphasis, not a change of category."
+  caption_structure: "TODO"
+  cta_rules: "TODO"
+  cadence:
+    posts_per_week: 3
+    operator_capacity: "one operator, other job + business"
+    production_hours_per_week: 6
+
+platforms:
+  - name: youtube_shorts
+    role: "TODO — build and prove here first (demographic fit)"
+    priority: primary
+    aspect_ratio: "9:16"
+    duration_seconds_default: 40
+  - name: tiktok
+    role: "TODO"
+    priority: secondary
+  - name: instagram_reels
+    role: "TODO"
+    priority: secondary
+
+audience:
+  serves:
+    - "Trinidad & Tobago nationals and the Caribbean diaspora"
+    - "steelband players, arrangers, tuners and their families"
+    - "music students and educators; instrument-history enthusiasts"
+  not_the_audience:
+    - "general curiosity traffic with no pathway to pan"
+
+ai_content_policy:
+  ai_voice: "TODO — allowed as a placeholder (neutral-clear only); target is a real Trinidadian VO."
+  ai_imagery: "Generic/non-figurative only. Never a named person or a claimed-historical pan."
+  ai_writing: "Draft only; every factual claim cites the subject fact corpus or a source before script lock."
+  human_review: "A person approves the concept + hook at Gate 1 and the final cut at Gate 2 before publish."
+  disclosure: "TODO"
+
+measurement:
+  metrics: ["stop_rate", "avg_percent_viewed", "completion_rate", "shares_per_1k", "followers_gained_per_1k", "non_follower_reach_pct", "target_market_pct"]
+  winner_rule: "Wins on customer-reach score + retention, not raw views."
