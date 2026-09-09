@@ -31,29 +31,30 @@
     },
     {
       "id": "C2",
-      "title": "The Spider Web Is Engineering",
-      "hook": "This pattern on a steelpan isn't decoration. It's a physics problem being solved.",
+      "title": "Why Is There a Spider Web on a Steelpan?",
+      "hook": "This looks like a spider web. It's actually a cheat sheet.",
       "narrative_structure": "myth_busting",
-      "visual_approach": "Lead on the etched 'spider web' groove pattern (diagram, not photo). Animate two dissonant notes placed side by side 'buzzing', then slide them to opposite sides of the drum and let them ring clean. Diagram-first, high-contrast typography.",
+      "visual_approach": "Open on the etched web pattern (clean animated diagram, not a photo). Play the 'spider web' idea lightly - a single web strand draws across the pan face. Then show it doing a job: two notes that clash flash red side by side, then slide to opposite ends of the drum and calm down; two notes that sound good together snap next to each other and glow. No note names on screen, no theory - colour and motion carry it. One slow push-in. End tag on the last frame.",
       "suggested_playbook": "minimalist-diagram",
-      "target_audience": "Music-curious, engineering-curious, steelband players",
+      "target_audience": "General audience, all ages - anyone who's seen a steelpan or heard the word 'spider web'",
       "target_platform": "youtube",
-      "target_duration_seconds": 40,
+      "target_duration_seconds": 38,
       "key_points": [
-        "The 'spider web' name comes from the groove pattern, but the pattern is a consequence, not the goal.",
-        "Semitone neighbours interfere through the shared steel, so they are pushed to opposite sides.",
-        "Fourths, fifths and octaves reinforce a struck note, so they are kept close.",
-        "A consistent interval formula also makes the pan far easier to tune accurately."
+        "That web pattern isn't decoration - it's a plan for where every note goes.",
+        "All the notes live on one sheet of steel, so notes that clash would buzz against each other.",
+        "So the plan keeps clashing notes far apart and friendly notes close together.",
+        "One man, Anthony Williams, worked it out in Trinidad in 1953.",
+        "Every steelpan lead in the world is still laid out from his plan."
       ],
-      "core_message": "Every note position on a steelpan is an acoustic decision.",
-      "cta": "Follow for more on how the pan works.",
-      "tone": "precise, quietly impressed",
+      "core_message": "The spider web on a steelpan is a map that makes the notes get along.",
+      "cta": "Follow - more on how pan works.",
+      "tone": "playful, plain-spoken, a little wow",
       "grounded_in": [
         "angles_discovered[1]",
         "data_points[2]",
         "data_points[3]"
       ],
-      "why_this_works": "Targets the 'that's just how it looks' assumption and replaces it with a mechanism. Slightly more technical than C1 - stronger with the music/engineering audience, a little less universal."
+      "why_this_works": "Leans on two things people already recognise - 'spider web' and the steelpan sound - so the hook lands cold with no knowledge needed. The 'clash vs friendly' visual is understood by anyone without a single music term. Payoff is a quick 'huh, that's clever' plus a Trinidadian name."
     },
     {
       "id": "C3",
@@ -83,9 +84,15 @@
     }
   ],
   "selected_concept": {
-    "concept_id": "C1",
-    "rationale": "Recommended. C1 has the hardest cold-open (disproves a near-universal assumption visually in ~2s), the best surprise-to-respect payoff for completion and shares, and it still name-drops Williams at the end as a bridge to C3 later. C2 is the same idea aimed at a narrower audience; C3 is a strong episode but works better once the account has a following. For a dry run C1 also exercises the most pipeline surface (comparison structure, morph animation, diagram tool, kinetic type).",
-    "modifications": []
+    "concept_id": "C2",
+    "rationale": "User pick. Spider-web framing has cultural pull right now and needs zero prior knowledge. Reworked for mass appeal: no music-theory terms, colour-and-motion visual, playful tone.",
+    "modifications": [
+      "Strip all technical vocabulary (no 'semitone', 'perfect fourth', 'harmonic spectrum').",
+      "Replace note-name labels with a colour system: clashing notes = red, friendly notes = warm glow.",
+      "Lead with the recognisable 'spider web' hook; keep it light and playful.",
+      "Shorten to ~38s.",
+      "Keep the real substance (one sheet of steel; the pattern is functional; Williams 1953; world standard)."
+    ]
   },
   "production_plan": {
     "pipeline": "animated-explainer",
@@ -93,7 +100,7 @@
     "render_runtime": "remotion",
     "renderer_family": "explainer-data",
     "composition_mode": "templated",
-    "art_direction": "Dark ground, one accent (chrome-fire orange), high-contrast grotesque display type. One slow push-in per scene, no frantic motion. Diagram is the hero; text supports it.",
+    "art_direction": "Dark ground, warm accent (chrome-fire orange) for 'friendly', red for 'clash'. High-contrast display type, minimal words on screen. One slow push-in per scene. Diagram is the hero. Playful but not childish.",
     "stages": [
       {
         "stage": "script",
@@ -103,7 +110,7 @@
       {
         "stage": "scene_plan",
         "tools": [],
-        "approach": "5-6 scenes: piano expectation / overlay onto pan / the real ring reveal / one-sheet-of-steel payoff / Williams bridge + end tag."
+        "approach": "4-5 scenes: web draws in / it's a plan not a pattern / clash vs friendly (colour + motion) / one sheet of steel / Williams 1953 + world + end tag"
       },
       {
         "stage": "assets",
@@ -242,6 +249,8 @@
     ]
   },
   "approval": {
-    "status": "pending"
+    "status": "approved_with_changes",
+    "user_notes": "Go with the spider web. Less technical, more mass appeal - spider-web/spider-man is trending.",
+    "approved_budget_usd": 0.0
   }
 }
