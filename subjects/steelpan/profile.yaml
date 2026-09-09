@@ -1,0 +1,104 @@
+# Steelpan Subject Package — profile
+# Read by montage_ext/ before every run. Plain values, no code.
+
+subject:
+  id: steelpan
+  name: "The Trinidad Steelpan — history and pioneers"
+  series: "Series 1 — Pan: The Story"
+  one_line: >
+    How a banned drum, a bamboo stamping tradition, and a generation of
+    young men in Port of Spain turned discarded oil drums into the only
+    acoustic instrument family invented in the 20th century.
+
+# ---------------------------------------------------------------------------
+platform:
+  primary: youtube_shorts        # build and prove here first
+  secondary: [tiktok, instagram_reels]   # same interface, added after Shorts works
+  aspect_ratio: "9:16"
+  duration_seconds_default: 45
+  duration_seconds_range: [20, 60]
+  captions: burned_in            # word-level, always on
+  safe_area: respect_platform_ui # keep text clear of the Shorts UI overlay
+
+# ---------------------------------------------------------------------------
+audience:
+  # From v2.2 §4. "Customer reach" = did we reach people who could plausibly
+  # care about / own a steelpan, not just general curiosity traffic.
+  target:
+    - "Trinidad & Tobago nationals"
+    - "Caribbean diaspora (US, UK, Canada)"
+    - "steelband players, arrangers, tuners, and their families"
+    - "music students and educators"
+    - "world-music and instrument-history enthusiasts"
+  not_the_target:
+    - "generic history/again-today reaction audiences with no pathway to pan"
+  reach_signal_notes: >
+    A video with 400k views outside the target and one with 8k inside it are
+    not comparable. The scoring loop weights predicted target-market fit, not
+    raw predicted views.
+
+# ---------------------------------------------------------------------------
+content_pillars:            # v2.2 §9 — front-loaded, lowest commercial suspicion
+  - culture_history
+  - education
+  - craftsmanship          # hold ~1 in 5 posts here — keeps a "making things"
+                           # signal in the account so a later product pivot is
+                           # a shift in emphasis, not a change of category
+  - surprising_fact
+
+cadence:
+  operator_capacity: "one operator, other job + business"
+  production_budget_hours_per_week: 6
+  target_posts_per_week: 3
+
+# ---------------------------------------------------------------------------
+brand:
+  tone: "confident, warm, precise. Trinidadian pride without nostalgia-mush."
+  narration:
+    voice: piper_local        # free, offline; Google TTS free tier as fallback
+    accent_note: >
+      Neutral-clear delivery. Do not fake a Trinidadian accent with TTS —
+      it reads as mockery. A real Trini VO can replace TTS later.
+  palette:
+    # placeholder — replace with the real brand palette
+    ink: "#0B1F2A"
+    paper: "#F4EFE6"
+    accent: "#D14A28"        # chrome-fire orange
+    steel: "#8A8F98"
+  typography:
+    display: "strong grotesque, high contrast"
+    body: "clean humanist sans"
+  motion_vocabulary:
+    - "one slow push/pull camera per scene, nothing frantic"
+    - "kinetic typography for quotes and dates"
+    - "animated diagrams for note layout, cycle of 4ths/5ths, pan families"
+    - "Ken Burns on public-domain stills only"
+  end_tag:
+    required: true
+    line: "Pan. Made in Trinidad. Nowhere else."
+    mode: overlay            # composited on final scene, not a separate black card
+
+# ---------------------------------------------------------------------------
+pipelines:
+  # openmontage pipelines this subject is allowed to use
+  preferred: [documentary-montage, animated-explainer]
+  music_required: true       # silent only with explicit opt-out
+  narration: optional         # a strong fact + graphics + music can carry a short
+
+# ---------------------------------------------------------------------------
+measurement:
+  # what montage_ext/publishers pulls back and montage_ext/ledger stores
+  metrics:
+    - impressions
+    - stop_rate_proxy          # swipe-away in first 3s
+    - average_percent_viewed
+    - completion_rate
+    - rewatches
+    - shares_per_1k
+    - saves_per_1k
+    - comments_per_1k
+    - followers_gained_per_1k
+    - non_follower_reach_pct
+    - target_market_pct        # estimated from geo + watch behaviour
+  winner_rule: >
+    A version wins on customer-reach score + retention, not on raw views.

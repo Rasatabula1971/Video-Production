@@ -1,0 +1,27 @@
+Video-Production
+================
+
+This repository incorporates third-party software.
+
+--------------------------------------------------------------------------------
+OpenMontage
+--------------------------------------------------------------------------------
+Location in this repo : vendor/openmontage/
+Upstream              : https://github.com/calesthio/openmontage
+Vendored at commit    : 08e2151fa02de28a5d6a312b3d575692bf147ad7  (2026-09-05)
+License              : GNU Affero General Public License v3.0 (AGPL-3.0)
+Full license text    : vendor/openmontage/LICENSE
+
+Modifications by this project to the vendored copy:
+  - Removed three example media files to keep the repository small
+    (not functional code): assets/signal-from-tomorrow-demo.mp4,
+    .agents/skills/hyperframes-animation/examples/assets/background-tech-data-flow.mp4,
+    .agents/skills/hyperframes-animation/examples/assets/hyperframes-showcase-hypecard.mp4
+  - No source code changes. Project-specific behaviour is layered in
+    montage_ext/ and subjects/, not by editing vendor/openmontage/.
+
+AGPL-3.0 obligation reminder:
+  If this control plane is ever made available to others over a network
+  (a hosted service, a web app), the Corresponding Source of the entire
+  combined work must be offered to those users under AGPL-3.0. This is not
+  triggered by local, single-operator use.

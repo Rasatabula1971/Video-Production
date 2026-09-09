@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment & credentials — never commit
+.env
+.env.local
+*.env
+.youtube-token.json
+*-service-account.json
+service_account*.json
+gcp-*.json
+
+# Pipeline outputs (regenerable — never commit large media)
+output/
+projects/
+corpus/
+**/corpus/
+music_library/
+runs/
+*.mp4
+*.mov
+*.wav
+!vendor/openmontage/**/demo-props/**
+
+# Local model downloads (Piper voices etc., fetched at runtime)
+*.onnx
+*.onnx.json
+
+# Node
+node_modules/
+vendor/openmontage/remotion-composer/out/
+vendor/openmontage/remotion-composer/projects/
+
+# Ledger database (local, regenerable structure but holds run history —
+# decide before committing; ignored for now)
+montage_ext/ledger/*.sqlite
+montage_ext/ledger/*.db
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
