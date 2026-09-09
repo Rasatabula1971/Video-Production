@@ -45,3 +45,12 @@ steelpan?" (the note layout). Free stack, no publish.
 
 $0.00. Piper (local), Pixabay (free), faster-whisper (local), Remotion (local),
 FFmpeg (local). No API calls.
+
+## Update — render complete (v2)
+
+Rendered end to end. Outputs in `renders/` (gitignored):
+- `note-layout_v2.mp4` — 1920x1080 master
+- `note-layout_v2_9x16.mp4` — 1080x1920 Shorts reframe
+
+**Works:** dark theme, legible cards, comparison + end-tag scenes, narration + music ducked, guardrails held, $0.
+**Caption bug root cause:** `vendor/openmontage/remotion-composer/src/components/CaptionOverlay.tsx` renders each word in a `display:inline-block` span with the separator *inside* it — the trailing space collapses. Fix in `montage_ext` (patched caption layer or post-process), never by editing `vendor/`.
