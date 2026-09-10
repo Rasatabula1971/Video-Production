@@ -29,11 +29,11 @@ const Bed: React.FC = () => {
           height: "100%",
           objectFit: "cover",
           transform: `scale(${z}) translateX(${pan}%)`,
-          filter: "saturate(0.7) brightness(0.5)",
+          filter: "saturate(0.85) brightness(0.78) contrast(1.05)",
         }}
       />
-      <AbsoluteFill style={{ background: `radial-gradient(70% 45% at 50% 46%, rgba(11,31,42,0.15) 0%, rgba(7,23,32,0.82) 70%)` }} />
-      <AbsoluteFill style={{ background: "rgba(7,23,32,0.35)" }} />
+      <AbsoluteFill style={{ background: `radial-gradient(75% 50% at 50% 48%, rgba(11,31,42,0.0) 0%, rgba(7,23,32,0.6) 78%)` }} />
+      <AbsoluteFill style={{ background: "rgba(7,23,32,0.18)" }} />
     </AbsoluteFill>
   );
 };
@@ -185,7 +185,7 @@ export const NoteLayoutShort: React.FC<NoteLayoutProps> = ({
       </Sequence>
 
       {/* HEADLINE ZONE — fixed band near the top */}
-      <div style={{ position: "absolute", top: 150, left: 0, right: 0, height: 320, display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
+      <div style={{ position: "absolute", top: 118, left: 0, right: 0, height: 300, display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
         <Sequence from={0} durationInFrames={S(beats.hookOut)}>
           <KineticLine text="It looks random." sub="it's the opposite" accentWord="random" />
         </Sequence>
@@ -203,18 +203,18 @@ export const NoteLayoutShort: React.FC<NoteLayoutProps> = ({
         </Sequence>
       </div>
 
-      {/* PAN — centred, large */}
-      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", marginTop: 90 }}>
+      {/* PAN — centred, large. Fades in after the opening spark clears. */}
+      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", marginTop: 40 }}>
         <div
           style={{
             transform: `scale(${panZoom})`,
-            opacity: interpolate(frame / fps, [0.3, 1.4], [0, 1], {
+            opacity: interpolate(frame / fps, [1.6, 2.7], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             }),
           }}
         >
-          <SpiderWebPan beats={beats.pan} size={920} />
+          <SpiderWebPan beats={beats.pan} size={1000} />
         </div>
       </AbsoluteFill>
 

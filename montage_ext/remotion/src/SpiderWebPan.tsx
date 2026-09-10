@@ -69,9 +69,11 @@ export const SpiderWebPan: React.FC<{ beats: PanBeats; size?: number }> = ({
   const clashBTo = 6;
   const bIndexFloat = interpolate(split, [0, 1], [clashBFrom, clashBTo]);
 
-  // two "friendly" notes snap together (3 and 8 -> 5 and 6)
-  const fAFloat = interpolate(split, [0, 1], [3, 5]);
-  const fBFloat = interpolate(split, [0, 1], [9, 6]);
+  // the "friendly" pair are dots 4 & 5 — they don't relocate, they warm up and
+  // nudge a touch closer (clear of clashA at 0 and clashB's destination at 6)
+  const friendlyA = 4;
+  const friendlyB = 5;
+  const nudge = split * 0.14; // fraction of one slot, pulling them together
 
   const rattleAmp = clash * (1 - split) * 10;
 
@@ -141,58 +143,64 @@ export const SpiderWebPan: React.FC<{ beats: PanBeats; size?: number }> = ({
       {Array.from({ length: N }).map((_, i) => {
         let x: number, y: number, fill = theme.paper, r = DOT, glow = 0;
 
+        // red only while clashing/splitting; calm white once split completes
+        const clashFill = clash > 0 && split < 0.85 ? theme.clash : theme.paper;
+        const clashGlow = clash * (1 - Math.min(1, split * 1.2));
+
         if (i === clashA) {
           const p = dotXY(clashA);
           x = p.x + wobble(1, t, 1) * rattleAmp;
           y = p.y + wobble(2, t, 1) * rattleAmp;
-          fill = clash > 0 ? theme.clash : theme.paper;
-          glow = clash * (1 - split);
+          fill = clashFill;
+          glow = clashGlow;
         } else if (i === clashBFrom) {
-          // this dot travels
+          // this dot travels to the opposite side
           const lo = Math.floor(bIndexFloat);
           const hi = Math.ceil(bIndexFloat);
           const f = bIndexFloat - lo;
           const a = dotXY(lo), b = dotXY(hi);
           x = a.x + (b.x - a.x) * f + wobble(3, t, 1) * rattleAmp;
           y = a.y + (b.y - a.y) * f + wobble(4, t, 1) * rattleAmp;
-          fill = clash > 0 ? theme.clash : theme.paper;
-          glow = clash * (1 - split);
-        } else if (i === 3) {
-          const lo = Math.floor(fAFloat), hi = Math.ceil(fAFloat), f = fAFloat - lo;
-          const a = dotXY(lo), b = dotXY(hi);
-          x = a.x + (b.x - a.x) * f;
-          y = a.y + (b.y - a.y) * f;
-          fill = split > 0.1 ? theme.accent : theme.paper;
-          glow = split * 0.9;
-        } else if (i === 9) {
-          const lo = Math.floor(fBFloat), hi = Math.ceil(fBFloat), f = fBFloat - lo;
-          const a = dotXY(lo), b = dotXY(hi);
-          x = a.x + (b.x - a.x) * f;
-          y = a.y + (b.y - a.y) * f;
-          fill = split > 0.1 ? theme.accent : theme.paper;
-          glow = split * 0.9;
+          fill = clashFill;
+          glow = clashGlow;
+        } else if (i === friendlyA || i === friendlyB) {
+          const dir = i === friendlyA ? 1 : -1;
+          const p = dotXY(i + dir * nudge);
+          x = p.x;
+          y = p.y;
+          fill = split > 0.15 ? theme.accent : theme.paper;
+          glow =
+            split *
+            interpolate(t, [beats.splitEnd, beats.splitEnd + 1.5], [0.9, 0.35], {
+              extrapolateLeft: "clamp",
+              extrapolateRight: "clamp",
+            });
         } else {
           const p = dotXY(i);
           x = p.x;
           y = p.y;
         }
 
+        // the home dot at clashB's destination fades as the travelling dot arrives
+        const homeFade =
+          i === clashBTo
+            ? interpolate(split, [0.4, 0.85], [1, 0], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              })
+            : 1;
+
         const pulse = 1 + ring * 0.12;
+        const baseOpacity = interpolate(webIn, [0.05, 0.35], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
         return (
           <g key={`d${i}`}>
             {glow > 0 && (
               <circle cx={x} cy={y} r={r * 2.4} fill={fill} opacity={glow * 0.25} />
             )}
-            <circle
-              cx={x}
-              cy={y}
-              r={r * pulse}
-              fill={fill}
-              opacity={interpolate(webIn, [0.05, 0.35], [0, 1], {
-                extrapolateLeft: "clamp",
-                extrapolateRight: "clamp",
-              })}
-            />
+            <circle cx={x} cy={y} r={r * pulse} fill={fill} opacity={baseOpacity * homeFade} />
           </g>
         );
       })}

@@ -10,416 +10,416 @@
     {
       "word": "pattern",
       "startMs": 140,
-      "endMs": 440
+      "endMs": 460
     },
     {
       "word": "on",
-      "startMs": 440,
-      "endMs": 620
+      "startMs": 460,
+      "endMs": 640
     },
     {
       "word": "a",
-      "startMs": 620,
-      "endMs": 760
+      "startMs": 640,
+      "endMs": 780
     },
     {
       "word": "steel",
-      "startMs": 760,
-      "endMs": 940
+      "startMs": 780,
+      "endMs": 960
     },
     {
       "word": "pan",
-      "startMs": 940,
-      "endMs": 1200
+      "startMs": 960,
+      "endMs": 1260
     },
     {
       "word": "looks",
-      "startMs": 1200,
-      "endMs": 1480
+      "startMs": 1260,
+      "endMs": 1540
     },
     {
       "word": "random.",
-      "startMs": 1480,
-      "endMs": 1920
+      "startMs": 1540,
+      "endMs": 2000
     },
     {
       "word": "It's",
-      "startMs": 2360,
-      "endMs": 2500
+      "startMs": 2500,
+      "endMs": 2680
     },
     {
       "word": "the",
-      "startMs": 2500,
-      "endMs": 2620
+      "startMs": 2680,
+      "endMs": 2800
     },
     {
       "word": "opposite.",
-      "startMs": 2620,
-      "endMs": 2920
+      "startMs": 2800,
+      "endMs": 3100
     },
     {
       "word": "Every",
-      "startMs": 3380,
-      "endMs": 3640
+      "startMs": 3660,
+      "endMs": 3920
     },
     {
       "word": "note",
-      "startMs": 3640,
-      "endMs": 3880
+      "startMs": 3920,
+      "endMs": 4160
     },
     {
       "word": "is",
-      "startMs": 3880,
-      "endMs": 4080
+      "startMs": 4160,
+      "endMs": 4360
     },
     {
       "word": "on",
-      "startMs": 4080,
-      "endMs": 4200
+      "startMs": 4360,
+      "endMs": 4480
     },
     {
       "word": "the",
-      "startMs": 4200,
-      "endMs": 4320
-    },
-    {
-      "word": "same",
-      "startMs": 4320,
+      "startMs": 4480,
       "endMs": 4600
     },
     {
-      "word": "sheet",
+      "word": "same",
       "startMs": 4600,
-      "endMs": 4860
+      "endMs": 4880
+    },
+    {
+      "word": "sheet",
+      "startMs": 4880,
+      "endMs": 5140
     },
     {
       "word": "of",
-      "startMs": 4860,
-      "endMs": 4980
+      "startMs": 5140,
+      "endMs": 5280
     },
     {
       "word": "metal.",
-      "startMs": 4980,
-      "endMs": 5240
+      "startMs": 5280,
+      "endMs": 5520
     },
     {
       "word": "Put",
-      "startMs": 5580,
-      "endMs": 5720
+      "startMs": 5940,
+      "endMs": 6100
     },
     {
       "word": "two",
-      "startMs": 5720,
-      "endMs": 5860
+      "startMs": 6100,
+      "endMs": 6320
     },
     {
       "word": "clashing",
-      "startMs": 5860,
-      "endMs": 6180
+      "startMs": 6320,
+      "endMs": 6700
     },
     {
       "word": "notes",
-      "startMs": 6180,
-      "endMs": 6500
+      "startMs": 6700,
+      "endMs": 7000
     },
     {
       "word": "side",
-      "startMs": 6500,
-      "endMs": 6860
+      "startMs": 7000,
+      "endMs": 7380
     },
     {
       "word": "by",
-      "startMs": 6860,
-      "endMs": 7080
+      "startMs": 7380,
+      "endMs": 7600
     },
     {
       "word": "side,",
-      "startMs": 7080,
-      "endMs": 7460
+      "startMs": 7600,
+      "endMs": 8039
     },
     {
       "word": "and",
-      "startMs": 7680,
-      "endMs": 7760
+      "startMs": 8220,
+      "endMs": 8340
     },
     {
       "word": "the",
-      "startMs": 7760,
-      "endMs": 7860
+      "startMs": 8340,
+      "endMs": 8440
     },
     {
       "word": "whole",
-      "startMs": 7860,
-      "endMs": 8020
+      "startMs": 8440,
+      "endMs": 8600
     },
     {
       "word": "pan",
-      "startMs": 8020,
-      "endMs": 8300
+      "startMs": 8600,
+      "endMs": 8900
     },
     {
       "word": "buzzes.",
-      "startMs": 8300,
-      "endMs": 8760
+      "startMs": 8900,
+      "endMs": 9360
     },
     {
       "word": "The",
-      "startMs": 9140,
-      "endMs": 9260
+      "startMs": 9840,
+      "endMs": 9960
     },
     {
       "word": "layout",
-      "startMs": 9260,
-      "endMs": 9480
+      "startMs": 9960,
+      "endMs": 10200
     },
     {
       "word": "fixes",
-      "startMs": 9480,
-      "endMs": 9880
+      "startMs": 10200,
+      "endMs": 10640
     },
     {
       "word": "that.",
-      "startMs": 9880,
-      "endMs": 10240
+      "startMs": 10640,
+      "endMs": 11000
     },
     {
       "word": "Clashing",
-      "startMs": 10600,
-      "endMs": 10900
+      "startMs": 11420,
+      "endMs": 11720
     },
     {
       "word": "notes",
-      "startMs": 10900,
-      "endMs": 11240
+      "startMs": 11720,
+      "endMs": 12080
     },
     {
       "word": "go",
-      "startMs": 11240,
-      "endMs": 11440
+      "startMs": 12080,
+      "endMs": 12280
     },
     {
       "word": "to",
-      "startMs": 11440,
-      "endMs": 11560
+      "startMs": 12280,
+      "endMs": 12400
     },
     {
       "word": "opposite",
-      "startMs": 11560,
-      "endMs": 11820
+      "startMs": 12400,
+      "endMs": 12680
     },
     {
       "word": "sides.",
-      "startMs": 11820,
-      "endMs": 12320
+      "startMs": 12680,
+      "endMs": 13200
     },
     {
       "word": "Friendly",
-      "startMs": 12800,
-      "endMs": 13060
+      "startMs": 13740,
+      "endMs": 14040
     },
     {
       "word": "notes",
-      "startMs": 13060,
-      "endMs": 13320
+      "startMs": 14040,
+      "endMs": 14320
     },
     {
       "word": "stay",
-      "startMs": 13320,
-      "endMs": 13580
+      "startMs": 14320,
+      "endMs": 14560
     },
     {
       "word": "close.",
-      "startMs": 13580,
-      "endMs": 13860
+      "startMs": 14560,
+      "endMs": 14860
     },
     {
       "word": "That's",
-      "startMs": 14300,
-      "endMs": 14500
+      "startMs": 15400,
+      "endMs": 15620
     },
     {
       "word": "the",
-      "startMs": 14500,
-      "endMs": 14600
+      "startMs": 15620,
+      "endMs": 15740
     },
     {
       "word": "trick.",
-      "startMs": 14600,
-      "endMs": 14800
+      "startMs": 15740,
+      "endMs": 15940
     },
     {
       "word": "It's",
-      "startMs": 15240,
-      "endMs": 15380
+      "startMs": 16460,
+      "endMs": 16620
     },
     {
       "word": "why",
-      "startMs": 15380,
-      "endMs": 15540
+      "startMs": 16620,
+      "endMs": 16760
     },
     {
       "word": "a",
-      "startMs": 15540,
-      "endMs": 15680
-    },
-    {
-      "word": "steel",
-      "startMs": 15680,
-      "endMs": 15820
-    },
-    {
-      "word": "pan",
-      "startMs": 15820,
-      "endMs": 16160
-    },
-    {
-      "word": "sings",
-      "startMs": 16160,
-      "endMs": 16460
-    },
-    {
-      "word": "instead",
-      "startMs": 16460,
+      "startMs": 16760,
       "endMs": 16940
     },
     {
-      "word": "of",
+      "word": "steel",
       "startMs": 16940,
       "endMs": 17100
     },
     {
-      "word": "rattling.",
+      "word": "pan",
       "startMs": 17100,
-      "endMs": 17420
+      "endMs": 17440
+    },
+    {
+      "word": "sings",
+      "startMs": 17440,
+      "endMs": 17740
+    },
+    {
+      "word": "instead",
+      "startMs": 17740,
+      "endMs": 18300
+    },
+    {
+      "word": "of",
+      "startMs": 18300,
+      "endMs": 18500
+    },
+    {
+      "word": "rattling.",
+      "startMs": 18500,
+      "endMs": 18820
     },
     {
       "word": "A",
-      "startMs": 17980,
-      "endMs": 18060
+      "startMs": 19440,
+      "endMs": 19540
     },
     {
       "word": "Trinidadian",
-      "startMs": 18060,
-      "endMs": 18720
-    },
-    {
-      "word": "tuner",
-      "startMs": 18720,
-      "endMs": 19100
-    },
-    {
-      "word": "named",
-      "startMs": 19100,
-      "endMs": 19300
-    },
-    {
-      "word": "Anthony",
-      "startMs": 19300,
-      "endMs": 19780
-    },
-    {
-      "word": "Williams",
-      "startMs": 19780,
+      "startMs": 19540,
       "endMs": 20200
     },
     {
-      "word": "worked",
+      "word": "tuner",
       "startMs": 20200,
-      "endMs": 20680
+      "endMs": 20600
+    },
+    {
+      "word": "named",
+      "startMs": 20600,
+      "endMs": 20840
+    },
+    {
+      "word": "Anthony",
+      "startMs": 20840,
+      "endMs": 21340
+    },
+    {
+      "word": "Williams",
+      "startMs": 21340,
+      "endMs": 21780
+    },
+    {
+      "word": "worked",
+      "startMs": 21780,
+      "endMs": 22320
     },
     {
       "word": "it",
-      "startMs": 20680,
-      "endMs": 20880
+      "startMs": 22320,
+      "endMs": 22500
     },
     {
       "word": "out",
-      "startMs": 20880,
-      "endMs": 21020
+      "startMs": 22500,
+      "endMs": 22660
     },
     {
       "word": "in",
-      "startMs": 21020,
-      "endMs": 21220
+      "startMs": 22660,
+      "endMs": 22860
     },
     {
       "word": "1953.",
-      "startMs": 21220,
-      "endMs": 22080
+      "startMs": 22860,
+      "endMs": 23680
     },
     {
       "word": "Every",
-      "startMs": 22900,
-      "endMs": 23120
+      "startMs": 24660,
+      "endMs": 24920
     },
     {
       "word": "lead",
-      "startMs": 23120,
-      "endMs": 23380
+      "startMs": 24920,
+      "endMs": 25160
     },
     {
       "word": "pan",
-      "startMs": 23380,
-      "endMs": 23660
+      "startMs": 25160,
+      "endMs": 25440
     },
     {
       "word": "in",
-      "startMs": 23660,
-      "endMs": 23820
+      "startMs": 25440,
+      "endMs": 25600
     },
     {
       "word": "the",
-      "startMs": 23820,
-      "endMs": 23920
+      "startMs": 25600,
+      "endMs": 25700
     },
     {
       "word": "world",
-      "startMs": 23920,
-      "endMs": 24220
+      "startMs": 25700,
+      "endMs": 26020
     },
     {
       "word": "is",
-      "startMs": 24220,
-      "endMs": 24520
+      "startMs": 26020,
+      "endMs": 26360
     },
     {
       "word": "still",
-      "startMs": 24520,
-      "endMs": 24740
+      "startMs": 26360,
+      "endMs": 26600
     },
     {
       "word": "built",
-      "startMs": 24740,
-      "endMs": 24960
+      "startMs": 26600,
+      "endMs": 26820
     },
     {
       "word": "from",
-      "startMs": 24960,
-      "endMs": 25200
+      "startMs": 26820,
+      "endMs": 27060
     },
     {
       "word": "his",
-      "startMs": 25200,
-      "endMs": 25340
+      "startMs": 27060,
+      "endMs": 27200
     },
     {
       "word": "map.",
-      "startMs": 25340,
-      "endMs": 25600
+      "startMs": 27200,
+      "endMs": 27520
     }
   ],
-  "durationSeconds": 27.0,
+  "durationSeconds": 28.92,
   "beats": {
     "pan": {
-      "webInEnd": 5.88,
-      "clashStart": 5.26,
-      "clashEnd": 9.76,
-      "splitEnd": 14.1,
-      "ringStart": 14.9
+      "webInEnd": 6.16,
+      "clashStart": 5.96,
+      "clashEnd": 10.46,
+      "splitEnd": 15.24,
+      "ringStart": 16.04
     },
-    "hookOut": 3.38,
-    "setupOut": 9.26,
-    "buildOut": 14.6,
-    "payoffOut": 18.72
+    "hookOut": 3.66,
+    "setupOut": 9.96,
+    "buildOut": 15.74,
+    "payoffOut": 20.2
   }
 }
