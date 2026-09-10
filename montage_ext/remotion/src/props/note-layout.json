@@ -1,0 +1,515 @@
+{
+  "voiceSrc": "voice.wav",
+  "musicSrc": "music.mp3",
+  "captions": [
+    {
+      "word": "That",
+      "startMs": 0,
+      "endMs": 140
+    },
+    {
+      "word": "spider",
+      "startMs": 140,
+      "endMs": 480
+    },
+    {
+      "word": "web",
+      "startMs": 480,
+      "endMs": 760
+    },
+    {
+      "word": "on",
+      "startMs": 760,
+      "endMs": 1000
+    },
+    {
+      "word": "a",
+      "startMs": 1000,
+      "endMs": 1140
+    },
+    {
+      "word": "steelpan,",
+      "startMs": 1140,
+      "endMs": 1560
+    },
+    {
+      "word": "it's",
+      "startMs": 1960,
+      "endMs": 2140
+    },
+    {
+      "word": "not",
+      "startMs": 2140,
+      "endMs": 2300
+    },
+    {
+      "word": "a",
+      "startMs": 2300,
+      "endMs": 2440
+    },
+    {
+      "word": "decoration,",
+      "startMs": 2440,
+      "endMs": 3000
+    },
+    {
+      "word": "it's",
+      "startMs": 3480,
+      "endMs": 3680
+    },
+    {
+      "word": "a",
+      "startMs": 3680,
+      "endMs": 3740
+    },
+    {
+      "word": "map.",
+      "startMs": 3740,
+      "endMs": 4019
+    },
+    {
+      "word": "Every",
+      "startMs": 4400,
+      "endMs": 4620
+    },
+    {
+      "word": "note",
+      "startMs": 4620,
+      "endMs": 4900
+    },
+    {
+      "word": "sits",
+      "startMs": 4900,
+      "endMs": 5160
+    },
+    {
+      "word": "on",
+      "startMs": 5160,
+      "endMs": 5400
+    },
+    {
+      "word": "one",
+      "startMs": 5400,
+      "endMs": 5620
+    },
+    {
+      "word": "piece",
+      "startMs": 5620,
+      "endMs": 5860
+    },
+    {
+      "word": "of",
+      "startMs": 5860,
+      "endMs": 6020
+    },
+    {
+      "word": "steel,",
+      "startMs": 6020,
+      "endMs": 6360
+    },
+    {
+      "word": "put",
+      "startMs": 6800,
+      "endMs": 6940
+    },
+    {
+      "word": "two",
+      "startMs": 6940,
+      "endMs": 7180
+    },
+    {
+      "word": "clashing",
+      "startMs": 7180,
+      "endMs": 7520
+    },
+    {
+      "word": "notes",
+      "startMs": 7520,
+      "endMs": 7900
+    },
+    {
+      "word": "next",
+      "startMs": 7900,
+      "endMs": 8160
+    },
+    {
+      "word": "to",
+      "startMs": 8160,
+      "endMs": 8360
+    },
+    {
+      "word": "each",
+      "startMs": 8360,
+      "endMs": 8520
+    },
+    {
+      "word": "other,",
+      "startMs": 8520,
+      "endMs": 8740
+    },
+    {
+      "word": "and",
+      "startMs": 8920,
+      "endMs": 9020
+    },
+    {
+      "word": "they",
+      "startMs": 9020,
+      "endMs": 9160
+    },
+    {
+      "word": "buzz.",
+      "startMs": 9160,
+      "endMs": 9400
+    },
+    {
+      "word": "They",
+      "startMs": 9940,
+      "endMs": 10100
+    },
+    {
+      "word": "fight",
+      "startMs": 10100,
+      "endMs": 10360
+    },
+    {
+      "word": "through",
+      "startMs": 10360,
+      "endMs": 10660
+    },
+    {
+      "word": "the",
+      "startMs": 10660,
+      "endMs": 10800
+    },
+    {
+      "word": "metal,",
+      "startMs": 10800,
+      "endMs": 11040
+    },
+    {
+      "word": "so",
+      "startMs": 11400,
+      "endMs": 11540
+    },
+    {
+      "word": "the",
+      "startMs": 11540,
+      "endMs": 11660
+    },
+    {
+      "word": "map",
+      "startMs": 11660,
+      "endMs": 11900
+    },
+    {
+      "word": "splits",
+      "startMs": 11900,
+      "endMs": 12220
+    },
+    {
+      "word": "them",
+      "startMs": 12220,
+      "endMs": 12500
+    },
+    {
+      "word": "up.",
+      "startMs": 12500,
+      "endMs": 12700
+    },
+    {
+      "word": "Clashing",
+      "startMs": 13160,
+      "endMs": 13480
+    },
+    {
+      "word": "notes",
+      "startMs": 13480,
+      "endMs": 13880
+    },
+    {
+      "word": "go",
+      "startMs": 13880,
+      "endMs": 14100
+    },
+    {
+      "word": "to",
+      "startMs": 14100,
+      "endMs": 14260
+    },
+    {
+      "word": "opposite",
+      "startMs": 14260,
+      "endMs": 14560
+    },
+    {
+      "word": "sides",
+      "startMs": 14560,
+      "endMs": 15060
+    },
+    {
+      "word": "of",
+      "startMs": 15060,
+      "endMs": 15300
+    },
+    {
+      "word": "the",
+      "startMs": 15300,
+      "endMs": 15400
+    },
+    {
+      "word": "drum.",
+      "startMs": 15400,
+      "endMs": 15680
+    },
+    {
+      "word": "Notes",
+      "startMs": 16200,
+      "endMs": 16379
+    },
+    {
+      "word": "that",
+      "startMs": 16379,
+      "endMs": 16620
+    },
+    {
+      "word": "sound",
+      "startMs": 16620,
+      "endMs": 16980
+    },
+    {
+      "word": "good",
+      "startMs": 16980,
+      "endMs": 17260
+    },
+    {
+      "word": "together",
+      "startMs": 17260,
+      "endMs": 17520
+    },
+    {
+      "word": "sit",
+      "startMs": 17520,
+      "endMs": 17860
+    },
+    {
+      "word": "close.",
+      "startMs": 17860,
+      "endMs": 18200
+    },
+    {
+      "word": "That's",
+      "startMs": 18800,
+      "endMs": 19020
+    },
+    {
+      "word": "why",
+      "startMs": 19020,
+      "endMs": 19220
+    },
+    {
+      "word": "a",
+      "startMs": 19220,
+      "endMs": 19360
+    },
+    {
+      "word": "steelpan",
+      "startMs": 19360,
+      "endMs": 19820
+    },
+    {
+      "word": "rings",
+      "startMs": 19820,
+      "endMs": 20100
+    },
+    {
+      "word": "clean",
+      "startMs": 20100,
+      "endMs": 20500
+    },
+    {
+      "word": "instead",
+      "startMs": 20500,
+      "endMs": 20960
+    },
+    {
+      "word": "of",
+      "startMs": 20960,
+      "endMs": 21180
+    },
+    {
+      "word": "rattling.",
+      "startMs": 21180,
+      "endMs": 21500
+    },
+    {
+      "word": "The",
+      "startMs": 22060,
+      "endMs": 22160
+    },
+    {
+      "word": "pattern",
+      "startMs": 22160,
+      "endMs": 22460
+    },
+    {
+      "word": "is",
+      "startMs": 22460,
+      "endMs": 22900
+    },
+    {
+      "word": "the",
+      "startMs": 22900,
+      "endMs": 23040
+    },
+    {
+      "word": "reason",
+      "startMs": 23040,
+      "endMs": 23360
+    },
+    {
+      "word": "it",
+      "startMs": 23360,
+      "endMs": 23560
+    },
+    {
+      "word": "sounds",
+      "startMs": 23560,
+      "endMs": 23880
+    },
+    {
+      "word": "like",
+      "startMs": 23880,
+      "endMs": 24180
+    },
+    {
+      "word": "that.",
+      "startMs": 24180,
+      "endMs": 24460
+    },
+    {
+      "word": "A",
+      "startMs": 24460,
+      "endMs": 25040
+    },
+    {
+      "word": "tuner",
+      "startMs": 25040,
+      "endMs": 25420
+    },
+    {
+      "word": "named",
+      "startMs": 25420,
+      "endMs": 25680
+    },
+    {
+      "word": "Anthony",
+      "startMs": 25680,
+      "endMs": 26120
+    },
+    {
+      "word": "Williams",
+      "startMs": 26120,
+      "endMs": 26560
+    },
+    {
+      "word": "worked",
+      "startMs": 26560,
+      "endMs": 27080
+    },
+    {
+      "word": "this",
+      "startMs": 27080,
+      "endMs": 27360
+    },
+    {
+      "word": "out",
+      "startMs": 27360,
+      "endMs": 27580
+    },
+    {
+      "word": "in",
+      "startMs": 27580,
+      "endMs": 27760
+    },
+    {
+      "word": "Trinidad",
+      "startMs": 27760,
+      "endMs": 28200
+    },
+    {
+      "word": "in",
+      "startMs": 28200,
+      "endMs": 28740
+    },
+    {
+      "word": "1953.",
+      "startMs": 28740,
+      "endMs": 29720
+    },
+    {
+      "word": "Every",
+      "startMs": 30580,
+      "endMs": 30820
+    },
+    {
+      "word": "lead",
+      "startMs": 30820,
+      "endMs": 31080
+    },
+    {
+      "word": "pan",
+      "startMs": 31080,
+      "endMs": 31360
+    },
+    {
+      "word": "in",
+      "startMs": 31360,
+      "endMs": 31600
+    },
+    {
+      "word": "the",
+      "startMs": 31600,
+      "endMs": 31700
+    },
+    {
+      "word": "world",
+      "startMs": 31700,
+      "endMs": 31980
+    },
+    {
+      "word": "still",
+      "startMs": 31980,
+      "endMs": 32280
+    },
+    {
+      "word": "follows",
+      "startMs": 32280,
+      "endMs": 32780
+    },
+    {
+      "word": "his",
+      "startMs": 32780,
+      "endMs": 33000
+    },
+    {
+      "word": "drawing.",
+      "startMs": 33000,
+      "endMs": 33400
+    }
+  ],
+  "durationSeconds": 34.8,
+  "beats": {
+    "pan": {
+      "webInEnd": 6.9,
+      "clashStart": 7.4,
+      "clashEnd": 11.9,
+      "splitEnd": 18.3,
+      "ringStart": 19.1
+    },
+    "hookOut": 4.4,
+    "setupOut": 11.4,
+    "buildOut": 18.8,
+    "payoffOut": 25.04
+  }
+}
