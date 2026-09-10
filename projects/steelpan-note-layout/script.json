@@ -1,128 +1,91 @@
 {
   "version": "1.0",
   "title": "Why Is There a Spider Web on a Steelpan?",
-  "total_duration_seconds": 38,
+  "total_duration_seconds": 33,
   "voice_performance": {
-    "performance_intent": "Plain-spoken and warm, like showing a friend something clever. Not a lecture. Land the payoff, then ease off for the name.",
+    "performance_intent": "Plain-spoken, a little sly, like letting someone in on something. Land 'the opposite' and 'sings instead of rattling'. Ease off, warm, for the closing line.",
     "pacing_profile": "conversational",
-    "energy_curve": "curious open, steady build, small lift on 'rings clean', settle for the closing line",
-    "pause_policy": "Short beat after the hook. Half-beat before 'they buzz'. Full beat before 'That's why'.",
+    "energy_curve": "flat curious open, tighten through the middle, small lift on 'sings', settle for the name",
+    "pause_policy": "Beat after 'looks random.' Beat before 'and the whole pan buzzes.' Beat before 'That's the trick.'",
     "sample_section_id": "hook",
-    "provider_notes": {
-      "piper": "en_US medium voice. Do not attempt a Trinidadian accent. Slight downward inflection on 'his drawing.'"
-    }
+    "provider_notes": { "kokoro": "bm_george or am_michael. No fake Trinidadian accent." }
   },
   "sections": [
     {
       "id": "hook",
       "label": "Hook",
-      "text": "That spider web on a steelpan? It's not a decoration. It's a map.",
+      "text": "This pattern on a steel pan looks random. It's the opposite.",
       "start_seconds": 0,
       "end_seconds": 4.5,
-      "speaker_directions": "Curious, a little sly. Tiny pause before 'It's a map.'",
+      "speaker_directions": "Sly. Full stop and beat after 'random'.",
       "enhancement_cues": [
-        {
-          "type": "animation",
-          "description": "A single web strand draws across the pan face, then the full web resolves"
-        },
-        {
-          "type": "overlay",
-          "description": "Word 'map' punches in"
-        }
+        { "type": "animation", "description": "Real hammered-metal disc backdrop; the vector web + note dots snap into focus over it" },
+        { "type": "overlay", "description": "'looks random' struck through, 'the opposite' punches in" }
       ],
       "source_ref": "data_points[3]; angles_discovered[1]"
     },
     {
       "id": "setup",
       "label": "Setup - one sheet of steel",
-      "text": "Every note sits on one piece of steel. Put two clashing notes next to each other, and they buzz. They fight through the metal.",
+      "text": "Every note is on the same sheet of metal. Put two clashing notes side by side, and the whole pan buzzes.",
       "start_seconds": 4.5,
-      "end_seconds": 15,
-      "speaker_directions": "Matter-of-fact. Half-beat before 'they buzz.'",
+      "end_seconds": 13,
+      "speaker_directions": "Matter-of-fact. Beat before 'and the whole pan buzzes'.",
       "enhancement_cues": [
-        {
-          "type": "diagram",
-          "description": "Two note-blobs flash red side by side and visibly rattle"
-        },
-        {
-          "type": "animation",
-          "description": "Faint distortion on the music bed under 'buzz'"
-        }
+        { "type": "diagram", "description": "Two dots flare red, adjacent, and visibly rattle; faint distortion on the bed under 'buzzes'" }
       ],
       "source_ref": "data_points[2]"
     },
     {
       "id": "build",
-      "label": "Build - the map splits them up",
-      "text": "So the map splits them up. Clashing notes go to opposite sides of the drum. Notes that sound good together sit close.",
-      "start_seconds": 15,
-      "end_seconds": 25,
-      "speaker_directions": "Steady, explanatory but light.",
+      "label": "Build - the layout fixes it",
+      "text": "The layout fixes that. Clashing notes go to opposite sides. Friendly notes stay close.",
+      "start_seconds": 13,
+      "end_seconds": 19.5,
+      "speaker_directions": "Steady, brisk.",
       "enhancement_cues": [
-        {
-          "type": "animation",
-          "description": "Red blobs slide apart to opposite edges and go quiet"
-        },
-        {
-          "type": "animation",
-          "description": "Two blobs glow warm orange and snap next to each other"
-        }
+        { "type": "animation", "description": "Red dots slide to opposite edges and calm; two dots glow warm and snap together" }
       ],
       "source_ref": "data_points[3]"
     },
     {
       "id": "payoff",
       "label": "Payoff",
-      "text": "That's why a steelpan rings clean instead of rattling. The pattern is the reason it sounds like that.",
-      "start_seconds": 25,
-      "end_seconds": 31.5,
-      "speaker_directions": "Small lift on 'rings clean'. This is the point - let it land.",
+      "text": "That's the trick. It's why a steel pan sings instead of rattling.",
+      "start_seconds": 19.5,
+      "end_seconds": 25,
+      "speaker_directions": "Small lift on 'sings'. Let it land.",
       "enhancement_cues": [
-        {
-          "type": "diagram",
-          "description": "Full pan diagram glows once, warm"
-        },
-        {
-          "type": "animation",
-          "description": "Music bed opens up briefly"
-        }
+        { "type": "animation", "description": "Whole pan pulses warm once; bed brightens briefly" }
       ],
       "source_ref": "data_points[0]; angles_discovered[1]"
     },
     {
       "id": "landing",
       "label": "Landing - Williams + end tag",
-      "text": "A tuner named Anthony Williams worked this out in Trinidad, in 1953. Every lead pan in the world still follows his drawing.",
-      "start_seconds": 31.5,
-      "end_seconds": 38,
-      "speaker_directions": "Warm, proud, unhurried. Downward inflection on 'his drawing.'",
+      "text": "A Trinidadian tuner named Anthony Williams worked it out in 1953. Every lead pan in the world is still built from his map.",
+      "start_seconds": 25,
+      "end_seconds": 33,
+      "speaker_directions": "Warm, proud, unhurried. Down on 'his map'.",
       "enhancement_cues": [
-        {
-          "type": "overlay",
-          "description": "'ANTHONY WILLIAMS - 1953' as type, no face"
-        },
-        {
-          "type": "animation",
-          "description": "The web pattern multiplies small across a faint world map"
-        },
-        {
-          "type": "overlay",
-          "description": "End tag composited on the final frame"
-        }
+        { "type": "overlay", "description": "'ANTHONY WILLIAMS - 1953' as type, no face" },
+        { "type": "animation", "description": "Web pattern multiplies small across a faint world map" },
+        { "type": "overlay", "description": "End tag on the final frame" }
       ],
       "source_ref": "data_points[1]"
     }
   ],
   "metadata": {
-    "word_count": 92,
-    "estimated_seconds_at_150wpm": 36.8,
+    "word_count": 80,
+    "estimated_seconds_at_150wpm": 32.0,
     "guardrail_checks": {
       "headline_claim_acoustic_qualifier": "n/a - headline claim not used",
-      "century_dating": "pass - dated 1953, not 19th century",
-      "contested_credit_stated_as_fact": "pass - credits Williams with the 4ths-and-5ths spider-web LAYOUT (well established); does NOT touch the contested 55-gallon-oil-drum credit",
-      "on_screen_assets": "pass - animated diagram + type only; no archival photos, no depiction of Williams",
-      "audio_rights": "pass - music bed only, no pan performance recording"
+      "century_dating": "pass - 1953",
+      "contested_credit_stated_as_fact": "pass - credits Williams with the LAYOUT (well established), not the contested oil-drum credit",
+      "on_screen_assets": "pass - vector diagram + type + non-figurative AI texture/atmosphere only; no archival photos, no depiction of Williams, no AI-generated 'accurate' or historical pan presented as real",
+      "audio_rights": "pass - music bed only"
     },
-    "review_flag": "The year 1953 is from secondary sources (Wikipedia, layout-history sites); the vetted Series 1 fact base names Williams but does not commit to a year. Confirm 1953 with a pan source before this is ever published, or soften to 'the early 1950s'."
+    "review_flag": "1953 is secondary-sourced; confirm with a pan source before publishing or soften to 'the early 1950s'.",
+    "wording_note": "Reworked from the first draft for spoken rhythm and mass appeal: shorter sentences, 'sings instead of rattling', 'friendly notes', 'built from his map' callback to the hook."
   }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  Img,
   interpolate,
   Sequence,
   spring,
@@ -12,6 +13,48 @@ import {
 import { theme } from "./theme";
 import { SpiderWebPan, PanBeats } from "./SpiderWebPan";
 import { Captions, Word } from "./Captions";
+
+/** Full-bleed photographic bed: a real hammered-metal disc, darkened, slow push. */
+const Bed: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const z = interpolate(frame, [0, durationInFrames], [1.08, 1.2]);
+  const pan = interpolate(frame, [0, durationInFrames], [-2, 2]);
+  return (
+    <AbsoluteFill style={{ background: theme.inkDeep }}>
+      <Img
+        src={staticFile("bed.jpg")}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          transform: `scale(${z}) translateX(${pan}%)`,
+          filter: "saturate(0.7) brightness(0.5)",
+        }}
+      />
+      <AbsoluteFill style={{ background: `radial-gradient(70% 45% at 50% 46%, rgba(11,31,42,0.15) 0%, rgba(7,23,32,0.82) 70%)` }} />
+      <AbsoluteFill style={{ background: "rgba(7,23,32,0.35)" }} />
+    </AbsoluteFill>
+  );
+};
+
+/** Brief atmosphere insert — flashes over the frame, then cuts back. */
+const Cutaway: React.FC<{ src: string; holdFrames: number }> = ({ src, holdFrames }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const inA = interpolate(frame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
+  const outA = interpolate(frame, [holdFrames - 6, holdFrames], [1, 0], { extrapolateLeft: "clamp" });
+  const z = interpolate(frame, [0, holdFrames], [1.02, 1.12]);
+  return (
+    <AbsoluteFill style={{ opacity: inA * outA }}>
+      <Img
+        src={staticFile(src)}
+        style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z})` }}
+      />
+      <AbsoluteFill style={{ background: "rgba(7,23,32,0.2)" }} />
+    </AbsoluteFill>
+  );
+};
 
 export type NoteLayoutProps = {
   voiceSrc: string;
@@ -128,24 +171,35 @@ export const NoteLayoutShort: React.FC<NoteLayoutProps> = ({
 
   return (
     <AbsoluteFill>
-      <Bg />
+      <Bed />
+
+      {/* atmosphere cutaways — quick inserts for texture */}
+      <Sequence from={0} durationInFrames={S(1.7)}>
+        <Cutaway src="broll_spark.jpg" holdFrames={S(1.7)} />
+      </Sequence>
+      <Sequence from={S(beats.setupOut - 2.6)} durationInFrames={S(1.5)}>
+        <Cutaway src="broll_ripple.jpg" holdFrames={S(1.5)} />
+      </Sequence>
+      <Sequence from={S(beats.payoffOut - 0.6)} durationInFrames={S(1.6)}>
+        <Cutaway src="broll_molten.jpg" holdFrames={S(1.6)} />
+      </Sequence>
 
       {/* HEADLINE ZONE — fixed band near the top */}
       <div style={{ position: "absolute", top: 150, left: 0, right: 0, height: 320, display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
         <Sequence from={0} durationInFrames={S(beats.hookOut)}>
-          <KineticLine text="That spider web isn't decoration." sub="it's a map" accentWord="map" />
+          <KineticLine text="It looks random." sub="it's the opposite" accentWord="random" />
         </Sequence>
         <Sequence from={S(beats.hookOut)} durationInFrames={S(beats.setupOut - beats.hookOut)}>
-          <KineticLine text="One sheet of steel." sub="clashing notes buzz" accentWord="steel" />
+          <KineticLine text="One sheet of metal." sub="clashing notes buzz" accentWord="metal" />
         </Sequence>
         <Sequence from={S(beats.setupOut)} durationInFrames={S(beats.buildOut - beats.setupOut)}>
-          <KineticLine text="The layout splits them up." sub="apart · together" accentWord="splits" />
+          <KineticLine text="The layout fixes it." sub="apart · together" accentWord="fixes" />
         </Sequence>
         <Sequence from={S(beats.buildOut)} durationInFrames={S(beats.payoffOut - beats.buildOut)}>
-          <KineticLine text="It rings clean." sub="not rattling" accentWord="clean" />
+          <KineticLine text="It sings." sub="instead of rattling" accentWord="sings" />
         </Sequence>
         <Sequence from={S(beats.payoffOut)}>
-          <KineticLine text="Anthony Williams · 1953" sub="the world still uses it" />
+          <KineticLine text="Anthony Williams · 1953" sub="still built from his map" />
         </Sequence>
       </div>
 

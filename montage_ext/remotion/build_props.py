@@ -6,12 +6,15 @@ stages the voice wav into public/voice.wav, writes the props file.
 """
 import json, io, sys, shutil, os
 
-VOICE = sys.argv[1] if len(sys.argv) > 1 else "bm_george"
+VOICE = sys.argv[1] if len(sys.argv) > 1 else "bm_george_v2"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PROJ = os.path.join(ROOT, "projects", "steelpan-note-layout")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-caps = json.load(io.open(os.path.join(PROJ, "assets", f"captions_kokoro_{VOICE}_full.json"), encoding="utf-8"))
+_capname = f"captions_kokoro_{VOICE}.json"
+if not os.path.exists(os.path.join(PROJ, "assets", _capname)):
+    _capname = f"captions_kokoro_{VOICE}_full.json"
+caps = json.load(io.open(os.path.join(PROJ, "assets", _capname), encoding="utf-8"))
 
 
 def fix_caption_tokens(words):
@@ -43,25 +46,26 @@ caps = fix_caption_tokens(caps)
 last = caps[-1]["endMs"] / 1000.0
 dur = round(last + 1.4, 2)  # small tail for the end tag
 
-shutil.copy(os.path.join(PROJ, "assets", "audio", f"kokoro_{VOICE}_full.wav"),
+shutil.copy(os.path.join(PROJ, "assets", "audio", f"kokoro_{VOICE}.wav"),
             os.path.join(HERE, "public", "voice.wav"))
 shutil.copy(os.path.join(PROJ, "assets", "audio", "music_bed.mp3"),
             os.path.join(HERE, "public", "music.mp3"))
 
 
-def word_time(substr, which="start"):
-    """First word whose text contains substr (case-insensitive)."""
-    for w in caps:
-        if substr.lower() in w["word"].lower():
-            return w["startMs"] / 1000.0 if which == "start" else w["endMs"] / 1000.0
-    return None
+def word_time(substr, nth=1, which="start"):
+    """The nth word whose text contains substr (case-insensitive)."""
+    hits = [w for w in caps if substr.lower() in w["word"].lower()]
+    if len(hits) < nth:
+        return None
+    w = hits[nth - 1]
+    return w["startMs"] / 1000.0 if which == "start" else w["endMs"] / 1000.0
 
 
-# scene boundaries anchored to real narration words
-hook_out = word_time("Every") or 4.6           # "Every note sits..."
-setup_out = word_time("So") or 13.0            # "So the layout splits..."
-build_out = word_time("That's") or 20.4        # "That's why a steelpan rings..."
-payoff_out = word_time("tuner") or 26.6        # "A tuner named Anthony Williams..."
+# scene boundaries anchored to real narration words (reworked script)
+hook_out = word_time("Every") or 4.5            # "Every note is on the same sheet..."
+setup_out = word_time("layout", 1) or 12.5      # "The layout fixes that..."
+build_out = word_time("trick") or word_time("That's") or 19.0  # "That's the trick..."
+payoff_out = word_time("tuner") or word_time("Trinidadian") or 25.0  # "A Trinidadian tuner named..."
 
 props = {
     "voiceSrc": "voice.wav",

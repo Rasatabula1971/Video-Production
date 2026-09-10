@@ -82,19 +82,20 @@ export const SpiderWebPan: React.FC<{ beats: PanBeats; size?: number }> = ({
       viewBox="0 0 1000 1000"
       style={{ overflow: "visible" }}
     >
-      {/* pan bowl */}
+      {/* pan bowl — semi-transparent so the real metal bed shows through */}
       <circle
         cx={C}
         cy={C}
         r={R + 90}
         fill={theme.inkDeep}
+        fillOpacity={0.55}
         stroke={theme.steel}
-        strokeOpacity={0.35}
+        strokeOpacity={0.45}
         strokeWidth={3}
         strokeDasharray={2 * Math.PI * (R + 90)}
         strokeDashoffset={(1 - webIn) * 2 * Math.PI * (R + 90)}
       />
-      <circle cx={C} cy={C} r={R + 90} fill="url(#panSheen)" opacity={0.5} />
+      <circle cx={C} cy={C} r={R + 90} fill="url(#panSheen)" opacity={0.35} />
 
       {/* radial grooves (the "web") — between each pair of note positions */}
       {Array.from({ length: N }).map((_, i) => {
