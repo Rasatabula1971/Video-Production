@@ -38,6 +38,10 @@ class YouTubeDataClient:
         self.api_key = api_key
         self._fetch_json = fetch_json or _default_fetch_json
         self.call_counts: dict[str, int] = {}
+        self._search_cache: dict[tuple[str, int], list[dict[str, Any]]] = {}
+        self._video_cache: dict[str, dict[str, Any]] = {}
+        self._channel_cache: dict[str, dict[str, Any]] = {}
+        self._playlist_cache: dict[tuple[str, int], list[str]] = {}
 
     def _get(self, method: str, params: dict[str, Any]) -> dict[str, Any]:
         clean = {key: value for key, value in params.items() if value is not None}
@@ -47,27 +51,31 @@ class YouTubeDataClient:
         return self._fetch_json(url)
 
     def search_videos(self, query: str, max_results: int = 25) -> list[dict[str, Any]]:
-        if not query.strip():
+        query = query.strip()
+        if not query:
             raise ValueError("query must not be blank")
         max_results = min(max(int(max_results), 1), 50)
-        payload = self._get(
-            "search",
-            {
-                "part": "snippet",
-                "q": query,
-                "type": "video",
-                "maxResults": max_results,
-                "order": "relevance",
-                "safeSearch": "none",
-            },
-        )
-        return list(payload.get("items", []))
+        key = (query, max_results)
+        if key not in self._search_cache:
+            payload = self._get(
+                "search",
+                {
+                    "part": "snippet",
+                    "q": query,
+                    "type": "video",
+                    "maxResults": max_results,
+                    "order": "relevance",
+                    "safeSearch": "none",
+                },
+            )
+            self._search_cache[key] = list(payload.get("items", []))
+        return list(self._search_cache[key])
 
     def videos(self, video_ids: list[str]) -> list[dict[str, Any]]:
         unique = list(dict.fromkeys(item for item in video_ids if item))
-        results: list[dict[str, Any]] = []
-        for start in range(0, len(unique), 50):
-            batch = unique[start : start + 50]
+        missing = [item for item in unique if item not in self._video_cache]
+        for start in range(0, len(missing), 50):
+            batch = missing[start : start + 50]
             payload = self._get(
                 "videos",
                 {
@@ -76,14 +84,16 @@ class YouTubeDataClient:
                     "maxResults": 50,
                 },
             )
-            results.extend(payload.get("items", []))
-        return results
+            for item in payload.get("items", []):
+                if item.get("id"):
+                    self._video_cache[item["id"]] = item
+        return [self._video_cache[item] for item in unique if item in self._video_cache]
 
     def channels(self, channel_ids: list[str]) -> list[dict[str, Any]]:
         unique = list(dict.fromkeys(item for item in channel_ids if item))
-        results: list[dict[str, Any]] = []
-        for start in range(0, len(unique), 50):
-            batch = unique[start : start + 50]
+        missing = [item for item in unique if item not in self._channel_cache]
+        for start in range(0, len(missing), 50):
+            batch = missing[start : start + 50]
             payload = self._get(
                 "channels",
                 {
@@ -92,23 +102,28 @@ class YouTubeDataClient:
                     "maxResults": 50,
                 },
             )
-            results.extend(payload.get("items", []))
-        return results
+            for item in payload.get("items", []):
+                if item.get("id"):
+                    self._channel_cache[item["id"]] = item
+        return [self._channel_cache[item] for item in unique if item in self._channel_cache]
 
     def playlist_video_ids(self, playlist_id: str, max_results: int = 25) -> list[str]:
         if not playlist_id:
             return []
         max_results = min(max(int(max_results), 1), 50)
-        payload = self._get(
-            "playlistItems",
-            {
-                "part": "contentDetails",
-                "playlistId": playlist_id,
-                "maxResults": max_results,
-            },
-        )
-        return [
-            item.get("contentDetails", {}).get("videoId")
-            for item in payload.get("items", [])
-            if item.get("contentDetails", {}).get("videoId")
-        ]
+        key = (playlist_id, max_results)
+        if key not in self._playlist_cache:
+            payload = self._get(
+                "playlistItems",
+                {
+                    "part": "contentDetails",
+                    "playlistId": playlist_id,
+                    "maxResults": max_results,
+                },
+            )
+            self._playlist_cache[key] = [
+                item.get("contentDetails", {}).get("videoId")
+                for item in payload.get("items", [])
+                if item.get("contentDetails", {}).get("videoId")
+            ]
+        return list(self._playlist_cache[key])
