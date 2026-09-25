@@ -1,0 +1,23 @@
+name: Discovery Engine tests
+
+on:
+  pull_request:
+    paths:
+      - "montage_ext/discovery/**"
+      - ".github/workflows/discovery-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "montage_ext/discovery/**"
+      - ".github/workflows/discovery-tests.yml"
+
+jobs:
+  discovery-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Run deterministic discovery tests
+        run: python -m unittest discover -s montage_ext/discovery/tests -v
