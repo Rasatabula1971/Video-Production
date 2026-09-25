@@ -86,9 +86,22 @@ Plan: `docs/PLAN_v1.md`. Sequence is that document's §5.
 
 ### Next implementation slice
 
-- [ ] Discovery observation schema for normalized video/channel evidence.
-- [ ] Deterministic outlier calculator with tests and null-safe baseline handling.
-- [ ] Winner/failure comparison record.
-- [ ] Gate 0 decision-packet generator.
+- [x] Discovery observation schema for normalized video/channel evidence.
+- [x] Deterministic outlier calculator with tests and null-safe baseline handling.
+- [x] Winner/failure comparison record.
+- [x] Gate 0 decision-packet generator.
 - [ ] Connect approved opportunity id into the existing OpenMontage run/ledger.
 - [ ] Join YouTube metrics back to opportunity/package records in `montage_ext/learning/`.
+
+
+### Discovery Engine v1 implementation
+
+- [x] Normalized Python `Observation` model.
+- [x] Configurable deterministic classification policy.
+- [x] Winner/failure pairing by topic with format/channel comparison metadata.
+- [x] Opportunity record builder with explicit missing-baseline accounting.
+- [x] Human-readable Gate 0 packet renderer.
+- [x] CLI entry point: `python -m montage_ext.discovery`.
+- [x] Unit-test suite.
+- [x] GitHub Actions workflow for Discovery Engine changes.
+- [ ] Validate the model against real YouTube evidence before adding crawlers or LLM scoring.
