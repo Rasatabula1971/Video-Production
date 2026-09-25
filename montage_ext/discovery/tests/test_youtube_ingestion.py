@@ -166,6 +166,20 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(item.topic, "turbo lag")
         self.assertEqual(client.call_counts["search"], 1)
 
+    def test_reuses_cached_channel_and_baseline_evidence(self) -> None:
+        client = YouTubeDataClient("fake-key", fetch_json=FakeAPI())
+        kwargs = {
+            "client": client,
+            "seed_topic": "turbo lag",
+            "max_results": 1,
+            "baseline_pool_size": 5,
+            "min_same_bucket_samples": 5,
+        }
+        collect_seed_observations(**kwargs)
+        first_counts = dict(client.call_counts)
+        collect_seed_observations(**kwargs)
+        self.assertEqual(client.call_counts, first_counts)
+
 
 if __name__ == "__main__":
     unittest.main()
