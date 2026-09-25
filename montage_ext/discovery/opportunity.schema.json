@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://video-production.local/schemas/opportunity.schema.json",
+  "title": "OpportunityRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "market", "topic", "status", "evidence", "original_contribution", "packaging", "gate0"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "market": {"type": "string", "minLength": 1},
+    "topic": {"type": "string", "minLength": 1},
+    "audience": {"type": ["string", "null"]},
+    "desired_outcome": {"type": ["string", "null"]},
+    "perceived_problem": {"type": ["string", "null"]},
+    "mechanism": {"type": ["string", "null"]},
+    "awareness": {
+      "type": ["string", "null"],
+      "enum": ["unaware", "problem_aware", "mechanism_aware", "solution_aware", "highly_informed", null]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SEED", "RESEARCHING", "DEMAND_FOUND", "OPPORTUNITY_FOUND", "PACKAGING", "AWAITING_PRODUCTION_DECISION", "REJECTED", "APPROVED_FOR_EXISTING_PIPELINE"]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_url", "classification"],
+        "properties": {
+          "source_url": {"type": "string", "format": "uri"},
+          "platform": {"type": ["string", "null"]},
+          "video_id": {"type": ["string", "null"]},
+          "channel": {"type": ["string", "null"]},
+          "views": {"type": ["integer", "null"], "minimum": 0},
+          "channel_baseline_views": {"type": ["number", "null"], "minimum": 0},
+          "outlier_multiple": {"type": ["number", "null"], "minimum": 0},
+          "classification": {"type": "string", "enum": ["winner", "failure", "comparator", "context"]},
+          "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "original_contribution": {"type": "string", "minLength": 1},
+    "source_dependency_pass": {"type": ["boolean", "null"]},
+    "scores": {
+      "type": "object",
+      "additionalProperties": {"type": ["number", "null"], "minimum": 0, "maximum": 100}
+    },
+    "packaging": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["titles", "thumbnails", "core_promise"],
+      "properties": {
+        "titles": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "thumbnails": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "core_promise": {"type": "string", "minLength": 1},
+        "curiosity_gap": {"type": ["string", "null"]},
+        "expected_payoff": {"type": ["string", "null"]}
+      }
+    },
+    "gate0": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision"],
+      "properties": {
+        "decision": {"type": "string", "enum": ["PRODUCE", "RESEARCH_MORE", "REFRAME", "REJECT"]},
+        "decided_by": {"type": ["string", "null"]},
+        "decided_at": {"type": ["string", "null"], "format": "date-time"},
+        "notes": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
