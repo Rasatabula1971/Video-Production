@@ -16,8 +16,11 @@ class Observation:
     channel_id: str | None = None
     channel: str | None = None
     published_at: str | None = None
+    collected_at: str | None = None
     views: int | None = None
     channel_baseline_views: float | None = None
+    channel_baseline_sample_size: int | None = None
+    channel_baseline_method: str | None = None
     outlier_multiple: float | None = None
     duration_seconds: float | None = None
     topic: str | None = None
@@ -38,7 +41,13 @@ class Observation:
         if not self.title.strip():
             raise ValueError("title must not be blank")
 
-        for name in ("views", "channel_baseline_views", "outlier_multiple", "duration_seconds"):
+        for name in (
+            "views",
+            "channel_baseline_views",
+            "channel_baseline_sample_size",
+            "outlier_multiple",
+            "duration_seconds",
+        ):
             value = getattr(self, name)
             if value is not None and value < 0:
                 raise ValueError(f"{name} must be >= 0")
