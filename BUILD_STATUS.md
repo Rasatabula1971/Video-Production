@@ -105,3 +105,19 @@ Plan: `docs/PLAN_v1.md`. Sequence is that document's §5.
 - [x] Unit-test suite.
 - [x] GitHub Actions workflow for Discovery Engine changes.
 - [ ] Validate the model against real YouTube evidence before adding crawlers or LLM scoring.
+
+
+### YouTube evidence ingestion v1
+
+- [x] Live `search.list` seed collection.
+- [x] Batched `videos.list` statistics/content retrieval.
+- [x] Batched `channels.list` channel metadata + uploads playlist lookup.
+- [x] Recent-upload baseline collection with playlist caching.
+- [x] Prefer same-duration baseline when at least 5 mature comparable uploads exist.
+- [x] Fall back to mature channel-wide median when same-duration sample is too small.
+- [x] Preserve baseline method, sample size, collection timestamp and duration in evidence records.
+- [x] Bounded retry/backoff for transient HTTP/network failures.
+- [x] Automotive-performance live-test seed pack.
+- [ ] Run the first live seed with a local `YOUTUBE_API_KEY`.
+- [ ] Inspect classifications before expanding to all automotive seed topics.
+- [ ] Build cross-seed deduplication and demand clustering after the first live validation.
