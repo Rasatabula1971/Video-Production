@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://video-production.local/schemas/observation.schema.json",
+  "title": "DiscoveryObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "source_url", "platform", "title"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "source_url": {"type": "string", "format": "uri"},
+    "platform": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "video_id": {"type": ["string", "null"]},
+    "channel_id": {"type": ["string", "null"]},
+    "channel": {"type": ["string", "null"]},
+    "published_at": {"type": ["string", "null"]},
+    "views": {"type": ["integer", "null"], "minimum": 0},
+    "channel_baseline_views": {"type": ["number", "null"], "minimum": 0},
+    "outlier_multiple": {"type": ["number", "null"], "minimum": 0},
+    "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+    "topic": {"type": ["string", "null"]},
+    "format": {"type": ["string", "null"]},
+    "promise": {"type": ["string", "null"]},
+    "hook": {"type": ["string", "null"]},
+    "classification": {
+      "type": ["string", "null"],
+      "enum": ["winner", "failure", "comparator", "context", null]
+    },
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "notes": {"type": ["string", "null"]}
+  }
+}
