@@ -60,3 +60,7 @@ montage_ext/ledger/*.db
 Thumbs.db
 .idea/
 .vscode/
+
+
+# Stage 2 research outputs
+stage2/**/output/
