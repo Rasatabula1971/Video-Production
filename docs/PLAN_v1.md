@@ -137,3 +137,50 @@ Gate 1 and Gate 2 (human approval) are live from step 3 onward.
 - AGPL-3.0 obligation: if the control plane is ever offered as a network service, the whole thing must be offered as source. Fine for now (personal/internal), flag before any SaaS.
 - Whisperx speed on the laptop — benchmark before committing to cloud GPU.
 - The `mcp__cip__*` MCP tools need a Claude session reload to load; the `cip-composer` CLI works now.
+
+
+---
+
+## 7. v2.2 demand-validation amendment (2026-09-25)
+
+The original plan began at subject research and production. The system now adds a pre-production intelligence layer described in `docs/DEMAND_VALIDATED_SYSTEM_v2_2.md`.
+
+### New upstream sequence
+
+```text
+market -> seed topics -> depth-first evidence collection
+-> winners + failures -> demand clusters
+-> audience awareness -> topic x format decomposition
+-> opportunity record -> title/thumbnail package
+-> Gate 0 -> existing OpenMontage pipeline
+```
+
+### New build scope
+
+5. **`montage_ext/discovery/`** — evidence contracts, deterministic outlier calculations, winner/failure pairing, demand clustering, opportunity records, packaging records and Gate 0 decision packet.
+6. **`montage_ext/learning/`** — join opportunity/package/content hypotheses to measured post-publication outcomes.
+
+These are extensions to the original four custom modules, not replacements.
+
+### Gate compatibility
+
+The original two gates retain their meaning:
+
+- Gate 1: approve before production spend.
+- Gate 2: approve before publish.
+
+v2.2 adds Gate 0 before both: *should this opportunity enter the production pipeline at all?*
+
+### Implementation order amendment
+
+Before Series 1 scales beyond dry runs:
+
+1. keep the proven free render chain intact;
+2. implement Discovery Engine contracts and deterministic calculations;
+3. generate a human-readable Gate 0 decision packet;
+4. continue hook/script scorer work;
+5. complete ledger + YouTube metrics;
+6. join measured outcomes in the Learning Engine;
+7. only then add more autonomous discovery/scoring behavior.
+
+Do not build a second production engine or modify vendored OpenMontage to implement this layer.

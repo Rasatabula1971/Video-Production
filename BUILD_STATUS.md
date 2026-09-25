@@ -74,3 +74,21 @@ Plan: `docs/PLAN_v1.md`. Sequence is that document's §5.
 | FFmpeg | yes (render, ffprobe QC) | ✅ 9.0.1 (winget Gyan.FFmpeg) |
 | Git | yes | ✅ |
 | GPU | no (optional, for faster Whisper/local video-gen) | none |
+
+
+## v2.2 demand-validation update
+
+- [x] Added `docs/DEMAND_VALIDATED_SYSTEM_v2_2.md`.
+- [x] Added `montage_ext/discovery/` contract and `opportunity.schema.json`.
+- [x] Added `montage_ext/learning/` contract.
+- [x] Added Gate 0 architecture while preserving Gate 1 (approve before spend) and Gate 2 (approve before publish).
+- [x] Updated repo README and `montage_ext/README.md` to make the repo self-describing.
+
+### Next implementation slice
+
+- [ ] Discovery observation schema for normalized video/channel evidence.
+- [ ] Deterministic outlier calculator with tests and null-safe baseline handling.
+- [ ] Winner/failure comparison record.
+- [ ] Gate 0 decision-packet generator.
+- [ ] Connect approved opportunity id into the existing OpenMontage run/ledger.
+- [ ] Join YouTube metrics back to opportunity/package records in `montage_ext/learning/`.
