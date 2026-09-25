@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import time
 from typing import Any, Callable
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -15,18 +16,31 @@ class YouTubeAPIError(RuntimeError):
 
 def _default_fetch_json(url: str) -> dict[str, Any]:
     request = Request(url, headers={"User-Agent": "Video-Production/DiscoveryEngine-v1"})
-    try:
-        with urlopen(request, timeout=30) as response:
-            payload = response.read().decode("utf-8")
-    except HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise YouTubeAPIError(f"YouTube API HTTP {exc.code}: {detail[:500]}") from exc
-    except URLError as exc:
-        raise YouTubeAPIError(f"YouTube API network error: {exc.reason}") from exc
-    try:
-        return json.loads(payload)
-    except json.JSONDecodeError as exc:
-        raise YouTubeAPIError("YouTube API returned invalid JSON") from exc
+    retriable = {429, 500, 502, 503, 504}
+
+    for attempt in range(3):
+        try:
+            with urlopen(request, timeout=30) as response:
+                payload = response.read().decode("utf-8")
+            try:
+                return json.loads(payload)
+            except json.JSONDecodeError as exc:
+                raise YouTubeAPIError("YouTube API returned invalid JSON") from exc
+        except HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            if exc.code in retriable and attempt < 2:
+                retry_after = exc.headers.get("Retry-After") if exc.headers else None
+                delay = float(retry_after) if retry_after and retry_after.isdigit() else 2 ** attempt
+                time.sleep(delay)
+                continue
+            raise YouTubeAPIError(f"YouTube API HTTP {exc.code}: {detail[:500]}") from exc
+        except URLError as exc:
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+                continue
+            raise YouTubeAPIError(f"YouTube API network error: {exc.reason}") from exc
+
+    raise YouTubeAPIError("YouTube API request failed after retries")
 
 
 class YouTubeDataClient:
